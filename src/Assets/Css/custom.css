@@ -1,0 +1,76 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+/* Reset Css */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: #10182b;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+/* MasterLayout */
+
+.sidebar__section {
+  width: 100px;
+  border-right: 1px solid rgba(221, 221, 221, 0.171);
+  height: 100vh;
+  position: fixed;
+}
+.main__body {
+  padding-left: 100px;
+}
+.sidebar__section .menu__section ul li {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+}
+.sidebar__section .menu__section ul li a {
+  display: inline-block;
+  background: #dddddd31;
+  padding: 18px 18px;
+  border-radius: 50px;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.sidebar__section .menu__section ul li a.active,
+.sidebar__section .menu__section ul li a:hover {
+  background: #17b978;
+}
+
+/* Home Component */
+.home__component {
+  background-image: url("../Images/bg-img-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home__component .home__content .img__file img {
+  width: 260px;
+  border-radius: 10px;
+}
+
+.my__btn {
+  background: linear-gradient(#17b978 0 0) 0 100%,
+    linear-gradient(#17b978 0 0) 0 100%, linear-gradient(#17b978 0 0) 100% 0,
+    linear-gradient(#17b978 0 0) 100% 0;
+  background-size: 20px 3px, 3px 20px;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.my__btn:hover {
+  background-position: 100% 100%, 0 0, 0 0, 100% 100%;
+}
