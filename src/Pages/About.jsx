@@ -1,18 +1,19 @@
 import React, { Fragment, Suspense } from "react";
 import MasterLayout from "../MasterLayout/MasterLayout";
-const HomeComponent = React.lazy(() =>
-  import("../Components/RootComponents/HomeComponent")
+const AboutComponent = React.lazy(() =>
+  import("../Components/RootComponents/AboutComponent")
 );
-const Home = () => {
+
+const About = () => {
   return (
     <Fragment>
       <MasterLayout>
         <Suspense fallback={""}>
-          <HomeComponent />
+          <AboutComponent />
         </Suspense>
       </MasterLayout>
     </Fragment>
   );
 };
 
-export default Home;
+export default About;
