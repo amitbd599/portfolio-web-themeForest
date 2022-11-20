@@ -80,121 +80,134 @@ const AboutComponent = () => {
     },
   ];
   return (
-    <section className='about__component'>
-      {/* Heading Text */}
-      <div className='container mx-auto pt-[80px]'>
-        <div className='heading__text flex justify-center relative'>
-          <h2 className='text-[60px] font-bold uppercase'>
-            About <span className='text-[#17B978]'>Me</span>
-          </h2>
-          <h2 className='text-[120px] font-extrabold opacity-5 absolute top-[-20px]'>
-            Resume
-          </h2>
+    <>
+      <section className='about__component'>
+        {/* Heading Text */}
+        <div className='container mx-auto pt-[80px]'>
+          <div className='heading__text flex justify-center relative'>
+            <h2 className='text-[60px] font-bold uppercase'>
+              About <span className='text-[#17B978]'>Me</span>
+            </h2>
+            <h2 className='text-[120px] font-extrabold opacity-5 absolute top-[-20px]'>
+              Resume
+            </h2>
+          </div>
         </div>
-      </div>
-      {/* Personal Info */}
-      <div className='container mx-auto px-14 mt-24'>
-        <div className='grid grid-cols-12 gap-10'>
-          <div className='col-span-6'>
-            <div className='flex gap-8'>
-              <div className='img__file relative'>
-                <img
-                  className='h-48 w-full object-cover md:h-full md:w-[250px] rounded-md'
-                  src={profileImg}
-                  alt=''
-                />
-              </div>
-              <div className='text__file '>
-                <h3 className='text-2xl font-bold border-b-2 pb-1'>
-                  PERSONAL INFOS
-                </h3>
-                <ul className='mt-2'>
-                  <li className='text-sm text-slate-400 mb-2'>
-                    Name:
-                    <span className='text-base font-bold text-slate-200 pl-2'>
-                      Alex Johan
-                    </span>
-                  </li>
-                  <li className='text-sm text-slate-400 mb-2'>
-                    Age:
-                    <span className='text-base font-bold text-slate-200 pl-2'>
-                      27
-                    </span>
-                  </li>
-                  <li className='text-sm text-slate-400 mb-2'>
-                    Phone:
-                    <span className='text-base font-bold text-slate-200 pl-2'>
-                      ++ 88 998866559 - 965
-                    </span>
-                  </li>
-                  <li className='text-sm text-slate-400 mb-2'>
-                    Skype:
-                    <span className='text-base font-bold text-slate-200 pl-2'>
-                      alex_jhohan
-                    </span>
-                  </li>
-                  <li className='text-sm text-slate-400 mb-2'>
-                    Email:
-                    <span className='text-base font-bold text-slate-200 pl-2'>
-                      info@adminbox.com
-                    </span>
-                  </li>
-                  <li className='text-sm text-slate-400 mb-2'>
-                    Address:
-                    <span className='text-base font-bold text-slate-200 pl-2'>
-                      Oakland, CA 94612
-                    </span>
-                  </li>
-                  <li className='text-sm text-slate-400 mb-2'>
-                    Languages:
-                    <span className='text-base font-bold text-slate-200 pl-2'>
-                      French, English, Bangla
-                    </span>
-                  </li>
-                  <li className='text-sm text-slate-400 mb-2'>
-                    Nationality:
-                    <span className='text-base font-bold text-slate-200 pl-2'>
-                      USA
-                    </span>
-                  </li>
-                </ul>
+        {/* Personal Info */}
+        <div className='container mx-auto px-14 mt-24'>
+          <div className='grid grid-cols-12 gap-10'>
+            <div className='col-span-6'>
+              <div className='flex gap-8'>
+                <div className='img__file relative'>
+                  <img
+                    className='h-48 w-full object-cover md:h-full md:w-[250px] rounded-md'
+                    src={profileImg}
+                    alt=''
+                  />
+                </div>
+                <div className='text__file '>
+                  <h3 className='text-2xl font-bold border-b-2 pb-1'>
+                    PERSONAL INFOS
+                  </h3>
+                  <ul className='mt-2'>
+                    <li className='text-sm text-slate-400 mb-2'>
+                      Name:
+                      <span className='text-base font-bold text-slate-200 pl-2'>
+                        Alex Johan
+                      </span>
+                    </li>
+                    <li className='text-sm text-slate-400 mb-2'>
+                      Age:
+                      <span className='text-base font-bold text-slate-200 pl-2'>
+                        27
+                      </span>
+                    </li>
+                    <li className='text-sm text-slate-400 mb-2'>
+                      Phone:
+                      <span className='text-base font-bold text-slate-200 pl-2'>
+                        ++ 88 998866559 - 965
+                      </span>
+                    </li>
+                    <li className='text-sm text-slate-400 mb-2'>
+                      Skype:
+                      <span className='text-base font-bold text-slate-200 pl-2'>
+                        alex_jhohan
+                      </span>
+                    </li>
+                    <li className='text-sm text-slate-400 mb-2'>
+                      Email:
+                      <span className='text-base font-bold text-slate-200 pl-2'>
+                        info@adminbox.com
+                      </span>
+                    </li>
+                    <li className='text-sm text-slate-400 mb-2'>
+                      Address:
+                      <span className='text-base font-bold text-slate-200 pl-2'>
+                        Oakland, CA 94612
+                      </span>
+                    </li>
+                    <li className='text-sm text-slate-400 mb-2'>
+                      Languages:
+                      <span className='text-base font-bold text-slate-200 pl-2'>
+                        French, English, Bangla
+                      </span>
+                    </li>
+                    <li className='text-sm text-slate-400 mb-2'>
+                      Nationality:
+                      <span className='text-base font-bold text-slate-200 pl-2'>
+                        USA
+                      </span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-          <div className='col-span-6'>
-            <div className='skill__file relative ml-5'>
-              <div className='grid grid-cols-12 gap-6'>
-                {experience.map((item, index) => (
-                  <div
-                    key={index}
-                    className='col-span-4 border border-[#ddd] px-2 py-2 rounded-lg'
-                  >
-                    <div>
-                      <div className='flex justify-center'>
-                        <h2 className='text-[40px] font-bold'>
-                          {item.number}
-                          <span className=' text-[#17B978] font-medium'>+</span>
-                        </h2>
-                      </div>
-                      <div className='flex justify-center mt-1'>
-                        <p className='text-[16px] font-semibold uppercase text-center'>
-                          {item.title}
-                        </p>
+            <div className='col-span-6'>
+              <div className='skill__file relative ml-5'>
+                <div className='grid grid-cols-12 gap-6'>
+                  {experience.map((item, index) => (
+                    <div
+                      key={index}
+                      className='col-span-4 border border-[#ddd] px-2 py-2 rounded-lg'
+                    >
+                      <div>
+                        <div className='flex justify-center'>
+                          <h2 className='text-[40px] font-bold'>
+                            {item.number}
+                            <span className=' text-[#17B978] font-medium'>
+                              +
+                            </span>
+                          </h2>
+                        </div>
+                        <div className='flex justify-center mt-1'>
+                          <p className='text-[16px] font-semibold uppercase text-center'>
+                            {item.title}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      {/* Skill Info */}
-      <div className='container mx-auto px-14 mt-24'>
-        <div className='skill'>
-          <div className='header__text flex justify-center'>
-            <h2 className='text-[30px] font-semibold'>My Skill</h2>
+
+        {/* Heading Text */}
+
+        <div className='container mx-auto pt-[80px]'>
+          <div className='heading__text flex justify-center relative'>
+            <h2 className='text-[60px] font-bold uppercase'>
+              <span className='text-[#17B978]'>My</span> Skill
+            </h2>
+            <h2 className='text-[120px] font-extrabold opacity-5 absolute top-[-20px]'>
+              Experience
+            </h2>
           </div>
+        </div>
+
+        {/* Skill Info */}
+        <div className='container mx-auto px-14 mt-24 mb-20'>
           <div className='skill__items mt-16'>
             <div className='grid grid-cols-12 gap-10'>
               {skill.map((item, index) => (
@@ -222,8 +235,8 @@ const AboutComponent = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

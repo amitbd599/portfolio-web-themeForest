@@ -79,7 +79,7 @@ const HomeComponent = () => {
                   <div className='download__resume flex justify-center mt-10'>
                     <Fade bottom>
                       <button className='my__btn px-8 py-3 bg-[#17b978] text-lg'>
-                        Get in Touch
+                        Download CV
                       </button>
                     </Fade>
                   </div>

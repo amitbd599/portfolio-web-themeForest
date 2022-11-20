@@ -54,7 +54,7 @@ h6 {
 
 /* Home Component */
 .home__component {
-  background-image: url("../Images/bg-img-1.png");
+  /* background-image: url("../Images/bg-img-1.png"); */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -84,4 +84,18 @@ h6 {
   height: 100%;
   top: 0;
   left: 0;
+}
+
+/* Service Component */
+.service__component .service__info .item {
+  background: transparent;
+  border: 1px solid #4a4a4a;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+  position: relative;
+  overflow: hidden;
+}
+.service__component .service__info .item:hover {
+  background: #17b978;
+  border-color: #17b978 !important;
 }
