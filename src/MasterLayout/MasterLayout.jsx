@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../Assets/Images/logo.png";
+// import logo from "../Assets/Images/logo.png";
 import {
   FaCommentAlt,
   FaHome,
@@ -15,7 +15,7 @@ const MasterLayout = (props) => {
       <div className='sidebar__section flex items-center justify-center'>
         <div>
           <div className='logo py-10'>
-            <img src={logo} alt='' />
+            <img src='/Assets/Images/logo.png' alt='' />
           </div>
           <nav className='menu__section mt-4'>
             <ul>

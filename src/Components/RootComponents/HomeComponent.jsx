@@ -19,7 +19,7 @@ const HomeComponent = () => {
             <div className='col-span-12 mt-16'>
               <div className='flex justify-center items-center'>
                 <div className='text__file'>
-                  <Fade bottom cascade>
+                  <Fade>
                     <div className='flex justify-center'>
                       <h2 className='text-[60px] font-bold text-[#17b978]'>
                         Hi, I am Amit Biswas
@@ -28,7 +28,7 @@ const HomeComponent = () => {
                   </Fade>
 
                   <div className='flex justify-center px-[100px]'>
-                    <Fade bottom cascade>
+                    <Fade>
                       {" "}
                       <p className='text-center	leading-8 text-base'>
                         Full Stack Web Developer and Web Application
@@ -40,7 +40,7 @@ const HomeComponent = () => {
                       </p>
                     </Fade>
                   </div>
-                  <Fade bottom cascade>
+                  <Fade>
                     <div className='icon__file flex justify-center mt-10'>
                       <div className='flex gap-4'>
                         <Link
@@ -77,8 +77,8 @@ const HomeComponent = () => {
                     </div>
                   </Fade>
                   <div className='download__resume flex justify-center mt-10'>
-                    <Fade bottom>
-                      <button className='my__btn px-8 py-3 bg-[#17b978] text-lg'>
+                    <Fade>
+                      <button className='my__btn px-8 py-3  text-lg'>
                         Download CV
                       </button>
                     </Fade>
