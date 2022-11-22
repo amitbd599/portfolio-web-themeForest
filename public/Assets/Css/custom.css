@@ -53,11 +53,12 @@ h6 {
 }
 
 /* Home Component */
-.home__component {
-  /* background-image: url("../Images/bg-img-1.png"); */
+/* .home__component {
+  background-image: url("/Assets/Images/bg-img-1.png");
   background-repeat: no-repeat;
   background-size: cover;
-}
+
+} */
 .home__component .home__content .img__file img {
   width: 260px;
   border-radius: 10px;

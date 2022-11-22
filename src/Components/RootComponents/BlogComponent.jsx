@@ -1,6 +1,7 @@
 import React from "react";
 import { Fade } from "react-reveal";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazyload";
 import Blog from "../../Script/Blog";
 const BlogComponent = () => {
   return (
@@ -27,7 +28,9 @@ const BlogComponent = () => {
                 <div className='item col-span-6 mb-8 ' key={index}>
                   <div>
                     <div className='img__file rounded-lg relative'>
-                      <img src={item.img} alt='' />
+                      <LazyLoad height={366} offset={100}>
+                        <img src={item.img} alt='' />
+                      </LazyLoad>
                       <div className='date absolute bottom-[22px] right-[10px]'>
                         <span className='bg-[#17b878] py-4 px-4 rounded-lg'>
                           {item.date}
