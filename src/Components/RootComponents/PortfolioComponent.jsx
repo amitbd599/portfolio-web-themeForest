@@ -12,39 +12,54 @@ const PortfolioComponent = () => {
         {/* ========= Personal Info Main Container ========= */}
         <div>
           {/* Heading Text */}
-          <div className='container mx-auto pt-[80px]'>
+          <div className='container mx-auto pt-[50px] md:pt-[80px]'>
             <Fade>
               <div className='heading__text flex justify-center relative'>
-                <h2 className='text-[60px] font-bold uppercase'>
-                  Portfolio <span className='text-[#17B978]'>Case</span>
+                <h2 className=' text-[46px] md:text-[60px] font-bold uppercase'>
+                  Portfolio <span className='text-[#17B978]'>Item</span>
                 </h2>
-                <h2 className='text-[120px] font-extrabold opacity-5 absolute top-[-20px]'>
+                <h2 className='text-[65px] md:text-[120px] font-extrabold opacity-5 absolute top-[0px] md:top-[-20px]'>
                   showcase
                 </h2>
               </div>
             </Fade>
           </div>
           {/* Portfolio Info */}
-          <div className='container mx-auto px-14 mt-24'>
+          <div className='container mx-auto px-5 md:px-14 mt-16 md:mt-24'>
             <Tabs>
               <div className='portfolio__tabs__body flex justify-center'>
                 <div className='portfolio__tabs__nav'>
                   <TabList>
-                    <Tab>Web Template</Tab>
-                    <Tab>Software</Tab>
-                    <Tab>Office</Tab>
-                    <Tab>Branding</Tab>
-                    <Tab>Photography</Tab>
+                    <Tab>
+                      <button className='my__btn px-4 py-2'>
+                        Web Template
+                      </button>
+                    </Tab>
+                    <Tab>
+                      <button className='my__btn px-4 py-2'>Software</button>
+                    </Tab>
+                    <Tab>
+                      <button className='my__btn px-4 py-2'>Office</button>
+                    </Tab>
+                    <Tab>
+                      <button className='my__btn px-4 py-2'>Branding</button>
+                    </Tab>
+                    <Tab>
+                      <button className='my__btn px-4 py-2'>Photography</button>
+                    </Tab>
                   </TabList>
                 </div>
               </div>
 
-              <div className='portfolio__tabs__body mt-14 mb-20'>
+              <div className='portfolio__tabs__body mt-14 mb-32 md:mb-20'>
                 {/* For Web Template */}
                 <TabPanel>
-                  <div className='grid grid-cols-12 gap-10'>
+                  <div className='grid grid-cols-12 gap-4 md:gap-10'>
                     {Portfolio?.webTemplate.map((item, index) => (
-                      <div className='col-span-4' key={index}>
+                      <div
+                        className='col-span-12 md:col-span-4 mb-5 md:mb-0'
+                        key={index}
+                      >
                         <Fade>
                           <a href={item.link}>
                             <div className='cursor-pointer'>
@@ -73,11 +88,14 @@ const PortfolioComponent = () => {
 
                 {/* For Web Software */}
                 <TabPanel>
-                  <div className='grid grid-cols-12 gap-10'>
+                  <div className='grid grid-cols-12 gap-4 md:gap-10'>
                     {Portfolio?.software.map((item, index) => (
-                      <div className='col-span-4' key={index}>
+                      <div
+                        className='col-span-12 md:col-span-4 mb-5 md:mb-0'
+                        key={index}
+                      >
                         <Fade>
-                          <Link to={item.link}>
+                          <a href={item.link}>
                             <div className='cursor-pointer'>
                               <div className='img__file rounded-md'>
                                 <img src={item.img} alt='' />
@@ -95,7 +113,7 @@ const PortfolioComponent = () => {
                                 </div>
                               </div>
                             </div>
-                          </Link>
+                          </a>
                         </Fade>
                       </div>
                     ))}
@@ -103,11 +121,14 @@ const PortfolioComponent = () => {
                 </TabPanel>
                 {/* For Web office */}
                 <TabPanel>
-                  <div className='grid grid-cols-12 gap-10'>
+                  <div className='grid grid-cols-12 gap-4 md:gap-10'>
                     {Portfolio?.office.map((item, index) => (
-                      <div className='col-span-4' key={index}>
+                      <div
+                        className='col-span-12 md:col-span-4 mb-5 md:mb-0'
+                        key={index}
+                      >
                         <Fade>
-                          <Link to={item.link}>
+                          <a href={item.link}>
                             <div className='cursor-pointer'>
                               <div className='img__file rounded-md'>
                                 <img src={item.img} alt='' />
@@ -125,7 +146,7 @@ const PortfolioComponent = () => {
                                 </div>
                               </div>
                             </div>
-                          </Link>
+                          </a>
                         </Fade>
                       </div>
                     ))}
@@ -133,11 +154,14 @@ const PortfolioComponent = () => {
                 </TabPanel>
                 {/* For Web Branding */}
                 <TabPanel>
-                  <div className='grid grid-cols-12 gap-10'>
+                  <div className='grid grid-cols-12 gap-4 md:gap-10'>
                     {Portfolio?.branding.map((item, index) => (
-                      <div className='col-span-4' key={index}>
+                      <div
+                        className='col-span-12 md:col-span-4 mb-5 md:mb-0'
+                        key={index}
+                      >
                         <Fade>
-                          <Link to={item.link}>
+                          <a href={item.link}>
                             <div className='cursor-pointer'>
                               <div className='img__file rounded-md'>
                                 <img src={item.img} alt='' />
@@ -155,7 +179,7 @@ const PortfolioComponent = () => {
                                 </div>
                               </div>
                             </div>
-                          </Link>
+                          </a>
                         </Fade>
                       </div>
                     ))}
@@ -163,11 +187,14 @@ const PortfolioComponent = () => {
                 </TabPanel>
                 {/* For Web photography */}
                 <TabPanel>
-                  <div className='grid grid-cols-12 gap-10'>
+                  <div className='grid grid-cols-12 gap-4 md:gap-10'>
                     {Portfolio?.photography.map((item, index) => (
-                      <div className='col-span-4' key={index}>
+                      <div
+                        className='col-span-12 md:col-span-4 mb-5 md:mb-0'
+                        key={index}
+                      >
                         <Fade>
-                          <Link to={item.link}>
+                          <a href={item.link}>
                             <div className='cursor-pointer'>
                               <div className='img__file rounded-md'>
                                 <img src={item.img} alt='' />
@@ -185,7 +212,7 @@ const PortfolioComponent = () => {
                                 </div>
                               </div>
                             </div>
-                          </Link>
+                          </a>
                         </Fade>
                       </div>
                     ))}

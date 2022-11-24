@@ -13,34 +13,43 @@ const AboutComponent = () => {
         {/* ========= Personal Info Main Container ========= */}
         <div>
           {/* Heading Text */}
-          <div className='container mx-auto pt-[80px]'>
+          <div className='container mx-auto pt-[50px] md:pt-[80px]'>
             <Fade>
               <div className='heading__text flex justify-center relative'>
-                <h2 className='text-[60px] font-bold uppercase'>
+                <h2 className=' text-[46px] md:text-[60px] font-bold uppercase'>
                   About <span className='text-[#17B978]'>Me</span>
                 </h2>
-                <h2 className='text-[120px] font-extrabold opacity-5 absolute top-[-20px]'>
+                <h2 className='text-[65px] md:text-[120px] font-extrabold opacity-5 absolute top-[0px] md:top-[-20px]'>
                   Resume
                 </h2>
               </div>
             </Fade>
           </div>
           {/* Personal Info */}
-          <div className='container mx-auto px-14 mt-24'>
-            <div className='grid grid-cols-12 gap-10'>
+          <div className='container mx-auto px-5 md:px-14 mt-10 md:mt-24'>
+            <div className='grid md:grid-cols-12 gap-10'>
               {/* Left Side */}
               <div className='col-span-6'>
-                <div className='flex gap-8'>
+                <div className=' block md:flex gap-8'>
                   <Fade>
-                    <div className='img__file relative'>
+                    <div className='hidden md:block img__file relative z-20 before:absolute before:content-[""] before:left-[16px] before:top-[-16px] before:w-full before:h-full before:border-[5px] before:border-[#17B978] before:z-[-9]'>
                       <img
-                        className='h-48 w-full object-cover md:h-full md:w-[250px] rounded-md'
+                        className='h-48 w-full object-cover md:h-full md:w-[250px] '
                         src='/Assets/Images/profile.png'
                         alt=''
                       />
                     </div>
+                    <div className='flex md:hidden justify-center mb-6'>
+                      <div className='flex justify-center items-center w-[150px] h-[150px] rounded-full overflow-hidden ring-offset-0 ring-4 ring-[#373D4D]'>
+                        <img
+                          className='object-cover '
+                          src='/Assets/Images/profile.png'
+                          alt=''
+                        />
+                      </div>
+                    </div>
                   </Fade>
-                  <div className='text__file '>
+                  <div className='text__file pl-4 pt-5 md:pt-0'>
                     <Fade>
                       <h3 className='text-2xl font-bold border-b-2 pb-1'>
                         PERSONAL INFOS
@@ -112,7 +121,7 @@ const AboutComponent = () => {
                       {Experience.map((item, index) => (
                         <div
                           key={index}
-                          className='col-span-4 border border-[#ddd] px-2 py-2 rounded-lg'
+                          className='col-span-6 md:col-span-4 border border-[#ddd] px-2 py-2 rounded-lg'
                         >
                           <div>
                             <div className='flex justify-center'>
@@ -142,13 +151,13 @@ const AboutComponent = () => {
         {/* ========= Skill Info Main Container ========= */}
         <div>
           {/* Heading Text */}
-          <div className='container mx-auto pt-[80px]'>
+          <div className='container mx-auto pt-[60px] md:pt-[80px]'>
             <Fade>
               <div className='heading__text flex justify-center relative'>
-                <h2 className='text-[60px] font-bold uppercase'>
+                <h2 className=' text-[46px] md:text-[60px] font-bold uppercase'>
                   <span className='text-[#17B978]'>My</span> Skill
                 </h2>
-                <h2 className='text-[120px] font-extrabold opacity-5 absolute top-[-20px]'>
+                <h2 className='text-[65px] md:text-[120px] font-extrabold opacity-5 absolute top-[0px] md:top-[-20px]'>
                   Experience
                 </h2>
               </div>
@@ -156,13 +165,13 @@ const AboutComponent = () => {
           </div>
 
           {/* Skill Info */}
-          <div className='container mx-auto px-14 mt-24 '>
+          <div className='container mx-auto px-5 md:px-14 mt-18 md:mt-24 '>
             <div className='skill__items mt-16'>
-              <div className='grid grid-cols-12 gap-10'>
+              <div className='grid grid-cols-12 gap-2 md:gap-10'>
                 {Skill.map((item, index) => (
                   <Fade>
                     <div
-                      className='col-span-2 mb-10 flex justify-center'
+                      className='col-span-6 md:col-span-2 mb-10 flex justify-center'
                       key={index}
                     >
                       <div style={{ width: 120, height: 120 }}>
@@ -193,23 +202,22 @@ const AboutComponent = () => {
         {/* ========= Resume Info Main Container ========= */}
         <div>
           {/* Heading Text */}
-          <div className='container mx-auto pt-[80px]'>
+          <div className='container mx-auto pt-[60px] md:pt-[80px] '>
             <Fade>
               <div className='heading__text flex justify-center relative'>
-                <h2 className='text-[60px] font-bold uppercase'>
+                <h2 className=' text-[46px] md:text-[60px] font-bold uppercase'>
                   Cover <span className='text-[#17B978]'>Letter</span>
                 </h2>
-                <h2 className='text-[120px] font-extrabold opacity-5 absolute top-[-20px]'>
+                <h2 className='text-[65px] md:text-[120px] font-extrabold opacity-5 absolute top-[0px] md:top-[-20px]'>
                   Resume
                 </h2>
               </div>
             </Fade>
           </div>
-
           {/* Resume Info */}
-          <div className='container mx-auto px-14 mt-24 mb-20'>
+          <div className='container mx-auto px-5 md:px-14 mt-24 mb-28 md:mb-20'>
             <div className='resume__file mt-16'>
-              <div className='grid grid-cols-12 gap-10'>
+              <div className='grid md:grid-cols-12 md:gap-10'>
                 {/* Left Side Working Experience*/}
                 <div className='col-span-6'>
                   <Fade>
@@ -221,7 +229,7 @@ const AboutComponent = () => {
                           alt=''
                         />
                       </div>
-                      <h2 className='text-[26px] ml-3 font-semibold relative'>
+                      <h2 className='text-[20px] md:text-[26px] ml-3 font-semibold relative'>
                         Working Experience
                       </h2>
                     </div>
@@ -231,17 +239,19 @@ const AboutComponent = () => {
                     {workingExperience.map((item, index) => (
                       <Fade key={index}>
                         <div className='items mb-8 relative'>
-                          <div>
-                            <h3 className='text-[25px] font-semibold text-[#17B978]'>
+                          <div className='md:flex items-center'>
+                            <h3 className='text-[20px] md:text-[25px]  font-semibold text-[#17B978]'>
                               {item.title}
-                              <span className='text-xs text-[#fff] bg-[#373D4D] rounded-full py-0.5 px-4 ml-2'>
+                            </h3>
+                            <div className='mt-[-4px] md:mt-0'>
+                              <span className='inline-block md:inline text-xs text-[#fff] bg-[#373D4D] rounded-full py-0.5 px-4 md:ml-2'>
                                 {item.time}
                               </span>
-                            </h3>
+                            </div>
                           </div>
-                          <p className='text-[18px] font-semibold'>
+                          <h3 className='text-[18px] font-semibold mt-2 md:mt-0'>
                             {item.company}
-                          </p>
+                          </h3>
                           <p className='text-base mt-3'>{item.text}</p>
                         </div>
                       </Fade>
@@ -259,7 +269,7 @@ const AboutComponent = () => {
                           alt=''
                         />
                       </div>
-                      <h2 className='text-[26px] ml-3 font-semibold relative'>
+                      <h2 className='text-[20px] md:text-[26px] ml-3 font-semibold relative'>
                         Educational Qualifications
                       </h2>
                     </div>
@@ -269,17 +279,19 @@ const AboutComponent = () => {
                     {Education.map((item, index) => (
                       <Fade key={index}>
                         <div className='items mb-8 relative'>
-                          <div>
-                            <h3 className='text-[25px] font-semibold text-[#17B978]'>
+                          <div className='md:flex items-center'>
+                            <h3 className='text-[20px] md:text-[25px]  font-semibold text-[#17B978]'>
                               {item.title}
-                              <span className='text-xs text-[#fff] bg-[#373D4D] rounded-full py-0.5 px-4 ml-2'>
+                            </h3>
+                            <div className='mt-[-4px] md:mt-0'>
+                              <span className='inline-block md:inline text-xs text-[#fff] bg-[#373D4D] rounded-full py-0.5 px-4 md:ml-2'>
                                 {item.time}
                               </span>
-                            </h3>
+                            </div>
                           </div>
-                          <p className='text-[18px] font-semibold'>
+                          <h3 className='text-[18px] font-semibold mt-2 md:mt-0'>
                             {item.institute}
-                          </p>
+                          </h3>
                           <p className='text-base mt-3'>{item.text}</p>
                         </div>
                       </Fade>

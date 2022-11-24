@@ -8,24 +8,27 @@ const BlogComponent = () => {
     <>
       <section className='blog__component'>
         {/* Heading Text */}
-        <div className='container mx-auto pt-[80px]'>
+        <div className='container mx-auto pt-[50px] md:pt-[80px]'>
           <Fade>
             <div className='heading__text flex justify-center relative'>
-              <h2 className='text-[60px] font-bold uppercase'>
+              <h2 className=' text-[46px] md:text-[60px] font-bold uppercase'>
                 Latest <span className='text-[#17B978]'>Blog</span>
               </h2>
-              <h2 className='text-[120px] font-extrabold opacity-5 absolute top-[-20px]'>
+              <h2 className='text-[65px] md:text-[120px] font-extrabold opacity-5 absolute top-[0px] md:top-[-20px]'>
                 Blog
               </h2>
             </div>
           </Fade>
         </div>
         {/* Blog Info */}
-        <div className='blog__info container mx-auto px-14 mt-24 mb-20'>
+        <div className='blog__info container mx-auto px-5 md:px-14 mt-16 md:mt-24 mb-32 md:mb-20'>
           <Fade>
-            <div className='grid grid-cols-12 gap-10'>
+            <div className='grid grid-cols-12 gp-4 md:gap-10'>
               {Blog.map((item, index) => (
-                <div className='item col-span-6 mb-8 ' key={index}>
+                <div
+                  className='item col-span-12 md:col-span-6 mb-12 md:mb-8 '
+                  key={index}
+                >
                   <div>
                     <div className='img__file rounded-lg relative'>
                       <LazyLoad height={366} offset={100}>
@@ -60,7 +63,7 @@ const BlogComponent = () => {
             </div>
           </Fade>
           {/* Pagination */}
-          <div className='pagination flex justify-center mt-16'>
+          <div className='pagination flex justify-center mt-6 md:mt-16'>
             <nav aria-label='Page navigation'>
               <ul className='inline-flex space-x-2'>
                 <li>

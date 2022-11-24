@@ -1,7 +1,7 @@
 const Experience = [
   {
     number: 10,
-    title: "numberS OF EXPERIENCE",
+    title: "NUMBERS OF EXPERIENCE",
   },
   {
     number: 360,

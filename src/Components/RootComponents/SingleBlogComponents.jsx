@@ -1,14 +1,14 @@
 import React from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaRegCalendarAlt, FaSearch, FaTags, FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const SingleBlogComponents = () => {
   return (
     <>
       <section className='about__component'>
-        <div className='container mx-auto px-14 pt-24 mb-20'>
-          <div className='grid grid-cols-12 gap-10'>
-            <div className='col-span-8'>
+        <div className='container mx-auto px-5 md:px-14 pt-16 md:pt-24 mb-32 md:mb-20'>
+          <div className='grid grid-cols-12 gap-5 md:gap-10'>
+            <div className='col-span-12 md:col-span-8'>
               <div className=' bg-[#373D4D] rounded-lg pb-8'>
                 <div className='img__file flex justify-center relative'>
                   <img
@@ -23,7 +23,30 @@ const SingleBlogComponents = () => {
                   </div>
                 </div>
                 <div className='text__file mt-8 mb-6 mx-8'>
-                  <h2 className='text-3xl font-semibold'>
+                  <div className=''>
+                    <div className=' mb-3'>
+                      <span className='inline items-center'>
+                        <FaUserAlt className='text-[#17B878] inline' />
+
+                        <span className='text-sm ml-1.5 '>Admin</span>
+                      </span>
+
+                      <span className='inline items-center ml-3'>
+                        <FaRegCalendarAlt className='text-[#17B878] inline' />
+
+                        <span className='text-sm ml-1.5'>14 February 2022</span>
+                      </span>
+
+                      <span className='inline items-center ml-3'>
+                        <FaTags className='text-[#17B878] inline' />
+
+                        <span className='text-sm ml-1.5'>
+                          NodeJS, NPM, React, Express
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <h2 className='text-2xl md:text-3xl font-semibold'>
                     12 Common JavaScript Functions You Need to Know.
                   </h2>
                 </div>
@@ -94,10 +117,9 @@ const SingleBlogComponents = () => {
                   </p>
                   <br />
                 </div>
-                <div className='comment__section'></div>
               </div>
             </div>
-            <div className='col-span-4 pl-2'>
+            <div className='col-span-12 md:col-span-4 md:pl-2 mt-8 md:mt-0'>
               {/* Search Intro */}
               <div className='search__box mb-8'>
                 <div className='relative text-gray-600 w-full'>
@@ -135,7 +157,7 @@ const SingleBlogComponents = () => {
                     <div className='text__file w-2/3'>
                       <Link
                         to={"/single-blog"}
-                        className='text-sm font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
+                        className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
                       >
                         Before diving into how they operate with their powers
                         combined.
@@ -156,10 +178,10 @@ const SingleBlogComponents = () => {
                     <div className='text__file w-2/3'>
                       <Link
                         to={"/single-blog"}
-                        className='text-sm font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
+                        className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
                       >
                         Unlike other JS frameworks, React doesn’t tell you what
-                        to do?
+                        to do you want?
                       </Link>
                       <span className='text-[12px] inline-block mt-1 text-slate-300'>
                         January 15, 2022
@@ -177,10 +199,10 @@ const SingleBlogComponents = () => {
                     <div className='text__file w-2/3'>
                       <Link
                         to={"/single-blog"}
-                        className='text-sm font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
+                        className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
                       >
-                        Unlike other JS frameworks, React doesn’t tell you what
-                        to do?
+                        It is designed to be as beginner-friendly as possible
+                        and uses simple variables and functions.
                       </Link>
                       <span className='text-[12px] inline-block mt-1 text-slate-300'>
                         January 15, 2022
@@ -198,10 +220,10 @@ const SingleBlogComponents = () => {
                     <div className='text__file w-2/3'>
                       <Link
                         to={"/single-blog"}
-                        className='text-sm font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
+                        className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
                       >
-                        Unlike other JS frameworks, React doesn’t tell you what
-                        to do?
+                        JavaScript is a high-level programming language that is
+                        one of the core technologies.
                       </Link>
                       <span className='text-[12px] inline-block mt-1 text-slate-300'>
                         January 15, 2022
@@ -219,10 +241,10 @@ const SingleBlogComponents = () => {
                     <div className='text__file w-2/3'>
                       <Link
                         to={"/single-blog"}
-                        className='text-sm font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
+                        className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
                       >
-                        Unlike other JS frameworks, React doesn’t tell you what
-                        to do?
+                        Python is one of the most chosen programming languages
+                        to learn first for its.
                       </Link>
                       <span className='text-[12px] inline-block mt-1 text-slate-300'>
                         January 15, 2022
@@ -238,22 +260,20 @@ const SingleBlogComponents = () => {
                   Tags
                 </h2>
                 <div className='mt-8'>
-                  <button className='bg-transparent  border-[#17B878] border-[1px] px-4 py-1.5 rounded-md mx-1 mb-3 text-base text-[#fff] hover:bg-[#17B878] hover:text-[#fff] transition-all duration-200 ease-linear '>
+                  <button className='my__btn px-4 py-1.5 mb-3 ml-2'>
                     NodeJS
                   </button>
-                  <button className='bg-transparent  border-[#17B878] border-[1px] px-4 py-1.5 rounded-md mx-1 mb-3 text-base text-[#fff] hover:bg-[#17B878] hover:text-[#fff] transition-all duration-200 ease-linear '>
+                  <button className='my__btn px-4 py-1.5 mb-3 ml-2 '>
                     JavaScript
                   </button>
-                  <button className='bg-transparent  border-[#17B878] border-[1px] px-4 py-1.5 rounded-md mx-1 mb-3 text-base text-[#fff] hover:bg-[#17B878] hover:text-[#fff] transition-all duration-200 ease-linear '>
+                  <button className='my__btn px-4 py-1.5 mb-3 ml-2 '>
                     ReactJS
                   </button>
-                  <button className='bg-transparent  border-[#17B878] border-[1px] px-4 py-1.5 rounded-md mx-1 mb-3 text-base text-[#fff] hover:bg-[#17B878] hover:text-[#fff] transition-all duration-200 ease-linear '>
-                    PHP
-                  </button>
-                  <button className='bg-transparent  border-[#17B878] border-[1px] px-4 py-1.5 rounded-md mx-1 mb-3 text-base text-[#fff] hover:bg-[#17B878] hover:text-[#fff] transition-all duration-200 ease-linear '>
+                  <button className='my__btn px-4 py-1.5 mb-3 ml-2'>PHP</button>
+                  <button className='my__btn px-4 py-1.5 mb-3 ml-2 '>
                     Server
                   </button>
-                  <button className='bg-transparent  border-[#17B878] border-[1px] px-4 py-1.5 rounded-md mx-1 mb-3 text-base text-[#fff] hover:bg-[#17B878] hover:text-[#fff] transition-all duration-200 ease-linear '>
+                  <button className='my__btn px-4 py-1.5 mb-3 ml-2'>
                     Development
                   </button>
                 </div>

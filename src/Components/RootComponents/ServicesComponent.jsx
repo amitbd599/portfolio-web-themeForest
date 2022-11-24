@@ -16,23 +16,23 @@ const ServicesComponent = () => {
     <>
       <section className='service__component'>
         {/* Heading Text */}
-        <div className='container mx-auto pt-[80px]'>
+        <div className='container mx-auto pt-[50px] md:pt-[80px]'>
           <Fade>
             <div className='heading__text flex justify-center relative'>
-              <h2 className='text-[60px] font-bold uppercase'>
-                Service <span className='text-[#17B978]'>Intro</span>
+              <h2 className=' text-[46px] md:text-[60px] font-bold uppercase'>
+                <span className='text-[#17B978]'>My</span> Services
               </h2>
-              <h2 className='text-[120px] font-extrabold opacity-5 absolute top-[-20px]'>
-                Observance
+              <h2 className='text-[65px] md:text-[120px] font-extrabold opacity-5 absolute top-[0px] md:top-[-20px]'>
+                Action
               </h2>
             </div>
           </Fade>
         </div>
         {/* Service Info */}
-        <div className='service__info container mx-auto px-14 mt-24 mb-20'>
+        <div className='service__info container mx-auto px-5 md:px-14 mt-16 md:mt-24 mb-32 md:mb-20'>
           <Fade>
             <div className='grid grid-cols-12 gap-6'>
-              <div className='item col-span-3'>
+              <div className='item col-span-12 md:col-span-3'>
                 <div className='flex justify-center  px-5 py-6 '>
                   <div>
                     <div className='icon__file mb-3 flex justify-center'>
@@ -50,7 +50,7 @@ const ServicesComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className='item col-span-3'>
+              <div className='item col-span-12 md:col-span-3'>
                 <div className='flex justify-center  px-5 py-6 '>
                   <div>
                     <div className='icon__file mb-3 flex justify-center'>
@@ -68,7 +68,7 @@ const ServicesComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className='item col-span-3'>
+              <div className='item col-span-12 md:col-span-3'>
                 <div className='flex justify-center  px-5 py-6 '>
                   <div>
                     <div className='icon__file mb-3 flex justify-center'>
@@ -86,7 +86,7 @@ const ServicesComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className='item col-span-3'>
+              <div className='item col-span-12 md:col-span-3'>
                 <div className='flex justify-center  px-5 py-6 '>
                   <div>
                     <div className='icon__file mb-3 flex justify-center'>
@@ -104,7 +104,7 @@ const ServicesComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className='item col-span-3'>
+              <div className='item col-span-12 md:col-span-3'>
                 <div className='flex justify-center  px-5 py-6 '>
                   <div>
                     <div className='icon__file mb-3 flex justify-center'>
@@ -122,7 +122,7 @@ const ServicesComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className='item col-span-3'>
+              <div className='item col-span-12 md:col-span-3'>
                 <div className='flex justify-center  px-5 py-6 '>
                   <div>
                     <div className='icon__file mb-3 flex justify-center'>
@@ -140,7 +140,7 @@ const ServicesComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className='item col-span-3'>
+              <div className='item col-span-12 md:col-span-3'>
                 <div className='flex justify-center  px-5 py-6 '>
                   <div>
                     <div className='icon__file mb-3 flex justify-center'>
@@ -158,7 +158,7 @@ const ServicesComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className='item col-span-3'>
+              <div className='item col-span-12 md:col-span-3'>
                 <div className='flex justify-center  px-5 py-6 '>
                   <div>
                     <div className='icon__file mb-3 flex justify-center'>

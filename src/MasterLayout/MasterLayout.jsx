@@ -1,10 +1,9 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-// import logo from "../Assets/Images/logo.png";
+import { NavLink } from "react-router-dom";
 import {
   FaCommentAlt,
+  FaEnvelope,
   FaHome,
-  FaPhoneSquareAlt,
   FaThLarge,
   FaUserAlt,
 } from "react-icons/fa";
@@ -14,17 +13,17 @@ const MasterLayout = (props) => {
     <>
       <div className='sidebar__section flex items-center justify-center'>
         <div>
-          <div className='logo py-10'>
+          <div className='hidden md:block  logo py-10'>
             <img src='/Assets/Images/logo.png' alt='' />
           </div>
-          <nav className='menu__section mt-4'>
+          <nav className=' menu__section py-1 md:py-0 md:mt-4'>
             <ul>
               <li>
                 <NavLink
                   className={(navData) => (navData.isActive ? "active" : "")}
                   to={"/"}
                 >
-                  <FaHome className='text-[16px]' />
+                  <FaHome className='text-[20px] md:text-[16px]' />
                 </NavLink>
               </li>
               <li>
@@ -32,7 +31,7 @@ const MasterLayout = (props) => {
                   className={(navData) => (navData.isActive ? "active" : "")}
                   to={"/about"}
                 >
-                  <FaUserAlt className='text-[16px]' />
+                  <FaUserAlt className='text-[20px] md:text-[16px]' />
                 </NavLink>
               </li>
               <li>
@@ -40,7 +39,7 @@ const MasterLayout = (props) => {
                   className={(navData) => (navData.isActive ? "active" : "")}
                   to={"/services"}
                 >
-                  <MdDesignServices className='text-[16px]' />
+                  <MdDesignServices className='text-[20px] md:text-[16px]' />
                 </NavLink>
               </li>
               <li>
@@ -48,7 +47,7 @@ const MasterLayout = (props) => {
                   className={(navData) => (navData.isActive ? "active" : "")}
                   to={"/portfolio"}
                 >
-                  <FaThLarge className='text-[16px]' />
+                  <FaThLarge className='text-[20px] md:text-[16px]' />
                 </NavLink>
               </li>
               <li>
@@ -56,7 +55,7 @@ const MasterLayout = (props) => {
                   className={(navData) => (navData.isActive ? "active" : "")}
                   to={"/blog"}
                 >
-                  <FaCommentAlt className='text-[16px]' />
+                  <FaCommentAlt className='text-[20px] md:text-[16px]' />
                 </NavLink>
               </li>
               <li>
@@ -64,7 +63,7 @@ const MasterLayout = (props) => {
                   className={(navData) => (navData.isActive ? "active" : "")}
                   to={"/contact"}
                 >
-                  <FaPhoneSquareAlt className='text-[16px]' />
+                  <FaEnvelope className='text-[20px] md:text-[16px]' />
                 </NavLink>
               </li>
             </ul>
