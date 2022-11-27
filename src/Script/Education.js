@@ -1,7 +1,7 @@
 const Education = [
   {
     title: "Software Engineer",
-    institute: "CirroStratus Inc.",
+    institute: "Cirro Stratus Inc.",
     time: "May 2018–Present",
     text: "Liaised with Product Managers to identify minimum viable product requirements and clearly defined feature sets into well-scoped user stories for individual team members scripts to improve continuous integration practices top of Kubernetes.",
   },

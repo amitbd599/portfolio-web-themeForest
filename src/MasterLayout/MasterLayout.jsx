@@ -13,8 +13,12 @@ const MasterLayout = (props) => {
     <>
       <div className='sidebar__section flex items-center justify-center'>
         <div>
-          <div className='hidden md:block  logo py-10'>
-            <img src='/Assets/Images/logo.png' alt='' />
+          <div className='hidden md:flex justify-center items-center  logo py-10 w-[80px] h-[80px] rounded-full overflow-hidden ring-offset-0 ring-2 ring-[#373D4D]'>
+            <img
+              className='object-cover  w-[80px] h-[80px] '
+              src='/Assets/Images/profile.png'
+              alt=''
+            />
           </div>
           <nav className=' menu__section py-1 md:py-0 md:mt-4'>
             <ul>

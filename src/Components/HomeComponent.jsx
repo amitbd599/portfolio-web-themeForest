@@ -8,12 +8,20 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
+import LazyLoad from "react-lazyload";
+import Typed from "react-typed";
 
 const HomeComponent = () => {
+  const typeText = [
+    "SOFTWARE DEVELOPER",
+    "WEB DESIGNER",
+    "WEB DEVELOPER",
+    "GRAPHIC DESIGNER",
+  ];
   return (
-    <section className='home__component min-h-screen flex items-center'>
+    <section className='home__component min-h-screen flex items-center justify-center'>
+      {/* ========= Home Main Container ========= */}
       <div className='container mx-auto px-5 md:px-14'>
-        {/* Home Content */}
         <div className='home__content '>
           <div className='grid grid-cols-12 gap-5'>
             <div className='col-span-12 md:mt-16 mb-20 md:mb-0'>
@@ -22,22 +30,38 @@ const HomeComponent = () => {
                   <Fade>
                     <div className='flex md:hidden justify-center mb-6'>
                       <div className='flex justify-center items-center w-[150px] h-[150px] rounded-full overflow-hidden ring-offset-0 ring-4 ring-[#373D4D]'>
-                        <img
-                          className='object-cover '
-                          src='/Assets/Images/profile.png'
-                          alt=''
-                        />
+                        <LazyLoad>
+                          <img
+                            className='object-cover '
+                            src='/Assets/Images/profile.png'
+                            alt='NetGrid - React Portfolio Template'
+                          />
+                        </LazyLoad>
                       </div>
                     </div>
                   </Fade>
                   <Fade>
-                    <div className='flex justify-center'>
-                      <h2 className='text-[32px] md:text-[60px] font-bold text-[#17b978]'>
-                        Hi, I am Amit Biswas
-                      </h2>
+                    <div className='flex justify-center text-center'>
+                      <div>
+                        <h2 className='text-[32px] md:text-[60px] font-bold '>
+                          I am
+                          <span className='text-[#17b978] ml-2'>
+                            Francis Briscoe
+                          </span>
+                        </h2>
+                        <h3 className='text-[26px] md:text-[40px] font-bold h-[60px]'>
+                          <Typed
+                            strings={typeText}
+                            typeSpeed={120}
+                            backSpeed={100}
+                            cursorChar=''
+                            loop
+                          />
+                        </h3>
+                      </div>
                     </div>
                   </Fade>
-                  <div className='flex justify-center md:px-[100px] mt-4'>
+                  <div className='flex justify-center md:px-[100px] md:mt-4'>
                     <Fade>
                       <p className='text-center	leading-[28px] md:leading-[35px] text-base '>
                         Full Stack Web Developer and Web Application
@@ -87,9 +111,14 @@ const HomeComponent = () => {
                   </Fade>
                   <div className='download__resume flex justify-center mt-8'>
                     <Fade>
-                      <button className='my__btn   text-base'>
-                        Download CV
-                      </button>
+                      <a
+                        href='/Assets/pdf/Resume-of-Amit-Biswas-MERN.pdf'
+                        download
+                      >
+                        <button className='my__btn   text-base'>
+                          Download CV
+                        </button>
+                      </a>
                     </Fade>
                   </div>
                 </div>

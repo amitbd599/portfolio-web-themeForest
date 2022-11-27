@@ -1,14 +1,13 @@
 import React from "react";
+import LazyLoad from "react-lazyload";
 import { Fade } from "react-reveal";
-import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import Portfolio from "../../Script/Portfolio";
+import Portfolio from "../Script/Portfolio";
 const PortfolioComponent = () => {
-  console.log(Portfolio);
   return (
     <>
-      <section className='portfolio__component'>
+      <section className='portfolio__component min-h-screen flex items-center justify-center'>
         {/* ========= Personal Info Main Container ========= */}
         <div>
           {/* Heading Text */}
@@ -64,7 +63,12 @@ const PortfolioComponent = () => {
                           <a href={item.link}>
                             <div className='cursor-pointer'>
                               <div className='img__file rounded-md'>
-                                <img src={item.img} alt='' />
+                                <LazyLoad>
+                                  <img
+                                    src={item.img}
+                                    alt='NetGrid - React Portfolio Template'
+                                  />
+                                </LazyLoad>
                                 <div className='overflow__intro'>
                                   <div className='flex justify-center items-center h-full'>
                                     <div className='w-full'>
@@ -86,7 +90,7 @@ const PortfolioComponent = () => {
                   </div>
                 </TabPanel>
 
-                {/* For Web Software */}
+                {/* For Software */}
                 <TabPanel>
                   <div className='grid grid-cols-12 gap-4 md:gap-10'>
                     {Portfolio?.software.map((item, index) => (
@@ -98,7 +102,13 @@ const PortfolioComponent = () => {
                           <a href={item.link}>
                             <div className='cursor-pointer'>
                               <div className='img__file rounded-md'>
-                                <img src={item.img} alt='' />
+                                <LazyLoad>
+                                  <img
+                                    src={item.img}
+                                    alt='NetGrid - React Portfolio Template'
+                                  />
+                                </LazyLoad>
+
                                 <div className='overflow__intro'>
                                   <div className='flex justify-center items-center h-full'>
                                     <div className='w-full'>
@@ -119,7 +129,7 @@ const PortfolioComponent = () => {
                     ))}
                   </div>
                 </TabPanel>
-                {/* For Web office */}
+                {/* For office */}
                 <TabPanel>
                   <div className='grid grid-cols-12 gap-4 md:gap-10'>
                     {Portfolio?.office.map((item, index) => (
@@ -131,7 +141,12 @@ const PortfolioComponent = () => {
                           <a href={item.link}>
                             <div className='cursor-pointer'>
                               <div className='img__file rounded-md'>
-                                <img src={item.img} alt='' />
+                                <LazyLoad>
+                                  <img
+                                    src={item.img}
+                                    alt='NetGrid - React Portfolio Template'
+                                  />
+                                </LazyLoad>
                                 <div className='overflow__intro'>
                                   <div className='flex justify-center items-center h-full'>
                                     <div className='w-full'>
@@ -152,7 +167,7 @@ const PortfolioComponent = () => {
                     ))}
                   </div>
                 </TabPanel>
-                {/* For Web Branding */}
+                {/* For Branding */}
                 <TabPanel>
                   <div className='grid grid-cols-12 gap-4 md:gap-10'>
                     {Portfolio?.branding.map((item, index) => (
@@ -164,7 +179,12 @@ const PortfolioComponent = () => {
                           <a href={item.link}>
                             <div className='cursor-pointer'>
                               <div className='img__file rounded-md'>
-                                <img src={item.img} alt='' />
+                                <LazyLoad>
+                                  <img
+                                    src={item.img}
+                                    alt='NetGrid - React Portfolio Template'
+                                  />
+                                </LazyLoad>
                                 <div className='overflow__intro'>
                                   <div className='flex justify-center items-center h-full'>
                                     <div className='w-full'>
@@ -185,7 +205,7 @@ const PortfolioComponent = () => {
                     ))}
                   </div>
                 </TabPanel>
-                {/* For Web photography */}
+                {/* For photography */}
                 <TabPanel>
                   <div className='grid grid-cols-12 gap-4 md:gap-10'>
                     {Portfolio?.photography.map((item, index) => (
@@ -197,7 +217,12 @@ const PortfolioComponent = () => {
                           <a href={item.link}>
                             <div className='cursor-pointer'>
                               <div className='img__file rounded-md'>
-                                <img src={item.img} alt='' />
+                                <LazyLoad>
+                                  <img
+                                    src={item.img}
+                                    alt='NetGrid - React Portfolio Template'
+                                  />
+                                </LazyLoad>
                                 <div className='overflow__intro'>
                                   <div className='flex justify-center items-center h-full'>
                                     <div className='w-full'>

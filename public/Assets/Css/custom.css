@@ -1,3 +1,9 @@
+/*
+Author       : amitjs
+Template Name: NetGrid - React Portfolio Template
+Version      : 1.0.1
+*/
+
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
@@ -32,6 +38,7 @@ h6 {
   text-align: center;
   font-size: 16px;
   -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   z-index: 1;
   font-family: inherit;
@@ -51,6 +58,7 @@ h6 {
   transform: translate(-50%, -50%) rotate(45deg);
   background: #17b978;
   -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
   transition: 0.5s ease;
   display: block;
   z-index: -1;
@@ -85,6 +93,8 @@ h6 {
 }
 
 .my__btn__two .circle {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  -o-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
   display: block;
@@ -96,6 +106,8 @@ h6 {
 }
 
 .my__btn__two .circle .icon {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  -o-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
@@ -105,6 +117,8 @@ h6 {
 }
 
 .my__btn__two .circle .icon.arrow {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  -o-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   left: 0.625rem;
   width: 1.125rem;
@@ -121,10 +135,14 @@ h6 {
   height: 0.625rem;
   border-top: 0.125rem solid #fff;
   border-right: 0.125rem solid #fff;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .my__btn__two .button-text {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  -o-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
@@ -146,6 +164,8 @@ h6 {
 
 .my__btn__two:hover .circle .icon.arrow {
   background: #fff;
+  -webkit-transform: translate(1rem, 0);
+  -ms-transform: translate(1rem, 0);
   transform: translate(1rem, 0);
 }
 
@@ -166,14 +186,20 @@ h6 {
 }
 .sidebar__section .menu__section ul li {
   padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  border-radius: 50px;
 }
 .sidebar__section .menu__section ul li a {
   display: inline-block;
   background: #dddddd31;
   padding: 18px 18px;
   border-radius: 50px;
+
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
@@ -235,6 +261,8 @@ h6 {
   background: transparent;
   border: 1px solid #4a4a4a;
   border-radius: 10px;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   position: relative;
   overflow: hidden;
@@ -257,6 +285,8 @@ h6 {
 }
 .portfolio__component .portfolio__tabs__body .img__file img {
   background: rgba(51, 51, 51, 0.589);
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 .portfolio__component .portfolio__tabs__body .overflow__intro {
@@ -266,13 +296,21 @@ h6 {
   background: #192c38;
   width: 100%;
   height: 55px;
+  -webkit-transform: translateY(60px);
+  -ms-transform: translateY(60px);
   transform: translateY(60px);
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 .portfolio__component .portfolio__tabs__body .img__file:hover img {
+  -webkit-transform: scale(110%);
+  -ms-transform: scale(110%);
   transform: scale(110%);
 }
 .portfolio__component .portfolio__tabs__body .img__file:hover .overflow__intro {
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
   transform: translateY(0px);
 }
 
@@ -310,9 +348,13 @@ h6 {
 }
 
 .blog__info .img__file img {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 .blog__info .img__file:hover img {
+  -webkit-transform: scale(110%);
+  -ms-transform: scale(110%);
   transform: scale(110%);
 }
 
@@ -327,6 +369,8 @@ h6 {
     right: auto;
     bottom: 0;
     top: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
     width: 100%;
     display: block;
@@ -336,6 +380,8 @@ h6 {
     height: auto;
   }
   .sidebar__section ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .sidebar__section .menu__section ul li a {

@@ -1,21 +1,26 @@
 import React from "react";
 import { FaRegCalendarAlt, FaSearch, FaTags, FaUserAlt } from "react-icons/fa";
+import LazyLoad from "react-lazyload";
 import { Link } from "react-router-dom";
 
 const SingleBlogComponents = () => {
   return (
     <>
-      <section className='about__component'>
+      <section className='single__blog__component min-h-screen flex items-center justify-center'>
+        {/* ========= Single Blog Main Container ========= */}
         <div className='container mx-auto px-5 md:px-14 pt-16 md:pt-24 mb-32 md:mb-20'>
           <div className='grid grid-cols-12 gap-5 md:gap-10'>
             <div className='col-span-12 md:col-span-8'>
               <div className=' bg-[#373D4D] rounded-lg pb-8'>
                 <div className='img__file flex justify-center relative'>
-                  <img
-                    className='object-cover w-full rounded-lg'
-                    src='/Assets/Images/blog/blog_7.png'
-                    alt=''
-                  />
+                  <LazyLoad>
+                    <img
+                      className='object-cover w-full rounded-lg'
+                      src='/Assets/Images/blog/blog_7.png'
+                      alt='NetGrid - React Portfolio Template'
+                    />
+                  </LazyLoad>
+
                   <div className='date absolute bottom-[20px] right-[10px]'>
                     <span className='bg-[#17b878] px-3 py-3 rounded-lg'>
                       January 15, 2022
@@ -148,19 +153,20 @@ const SingleBlogComponents = () => {
                 <div className='mt-8'>
                   <div className='items flex justify-between gap-4 mb-5'>
                     <div className='img__file w-1/3 rounded-md'>
-                      <img
-                        className='rounded-md w-full h-full '
-                        src='/Assets/Images/blog/blog_1.png'
-                        alt=''
-                      />
+                      <LazyLoad>
+                        <img
+                          className='rounded-md w-full h-full '
+                          src='/Assets/Images/blog/blog_1.png'
+                          alt='NetGrid - React Portfolio Template'
+                        />
+                      </LazyLoad>
                     </div>
                     <div className='text__file w-2/3'>
                       <Link
                         to={"/single-blog"}
                         className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
                       >
-                        Before diving into how they operate with their powers
-                        combined.
+                        Before diving into how they operate with their powers.
                       </Link>
                       <span className='text-[12px] inline-block mt-1 text-slate-300'>
                         January 15, 2022
@@ -169,19 +175,21 @@ const SingleBlogComponents = () => {
                   </div>
                   <div className='items flex justify-between gap-4 mb-5'>
                     <div className='img__file w-1/3 rounded-md'>
-                      <img
-                        className='rounded-md w-full h-full '
-                        src='/Assets/Images/blog/blog_2.png'
-                        alt=''
-                      />
+                      <LazyLoad>
+                        <img
+                          className='rounded-md w-full h-full '
+                          src='/Assets/Images/blog/blog_2.png'
+                          alt='NetGrid - React Portfolio Template'
+                        />
+                      </LazyLoad>
                     </div>
                     <div className='text__file w-2/3'>
                       <Link
                         to={"/single-blog"}
                         className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
                       >
-                        Unlike other JS frameworks, React doesn’t tell you what
-                        to do you want?
+                        Unlike other JS frameworks, React doesn’t to do you
+                        want?
                       </Link>
                       <span className='text-[12px] inline-block mt-1 text-slate-300'>
                         January 15, 2022
@@ -190,11 +198,13 @@ const SingleBlogComponents = () => {
                   </div>
                   <div className='items flex justify-between gap-4 mb-5'>
                     <div className='img__file w-1/3 rounded-md'>
-                      <img
-                        className='rounded-md w-full h-full '
-                        src='/Assets/Images/blog/blog_3.png'
-                        alt=''
-                      />
+                      <LazyLoad>
+                        <img
+                          className='rounded-md w-full h-full '
+                          src='/Assets/Images/blog/blog_3.png'
+                          alt='NetGrid - React Portfolio Template'
+                        />
+                      </LazyLoad>
                     </div>
                     <div className='text__file w-2/3'>
                       <Link
@@ -202,7 +212,7 @@ const SingleBlogComponents = () => {
                         className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
                       >
                         It is designed to be as beginner-friendly as possible
-                        and uses simple variables and functions.
+                        and uses.
                       </Link>
                       <span className='text-[12px] inline-block mt-1 text-slate-300'>
                         January 15, 2022
@@ -211,19 +221,20 @@ const SingleBlogComponents = () => {
                   </div>
                   <div className='items flex justify-between gap-4 mb-5'>
                     <div className='img__file w-1/3 rounded-md'>
-                      <img
-                        className='rounded-md w-full h-full '
-                        src='/Assets/Images/blog/blog_6.png'
-                        alt=''
-                      />
+                      <LazyLoad>
+                        <img
+                          className='rounded-md w-full h-full '
+                          src='/Assets/Images/blog/blog_6.png'
+                          alt='NetGrid - React Portfolio Template'
+                        />
+                      </LazyLoad>
                     </div>
                     <div className='text__file w-2/3'>
                       <Link
                         to={"/single-blog"}
                         className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
                       >
-                        JavaScript is a high-level programming language that is
-                        one of the core technologies.
+                        JavaScript is a high-level programming language that.
                       </Link>
                       <span className='text-[12px] inline-block mt-1 text-slate-300'>
                         January 15, 2022
@@ -232,19 +243,20 @@ const SingleBlogComponents = () => {
                   </div>
                   <div className='items flex justify-between gap-4 mb-5'>
                     <div className='img__file w-1/3 rounded-md'>
-                      <img
-                        className='rounded-md w-full h-full '
-                        src='/Assets/Images/blog/blog_5.png'
-                        alt=''
-                      />
+                      <LazyLoad>
+                        <img
+                          className='rounded-md w-full h-full '
+                          src='/Assets/Images/blog/blog_5.png'
+                          alt='NetGrid - React Portfolio Template'
+                        />
+                      </LazyLoad>
                     </div>
                     <div className='text__file w-2/3'>
                       <Link
                         to={"/single-blog"}
                         className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
                       >
-                        Python is one of the most chosen programming languages
-                        to learn first for its.
+                        Python is one of the most chosen programming.
                       </Link>
                       <span className='text-[12px] inline-block mt-1 text-slate-300'>
                         January 15, 2022
