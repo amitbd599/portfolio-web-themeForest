@@ -27,7 +27,7 @@ const ContactComponent = () => {
       .then(
         (result) => {
           if (result.text === "OK") {
-            toast.success("Massage Sent Successfully");
+            toast.success("Massage Sent Successfully!");
             form.current[0].value = "";
             form.current[1].value = "";
             form.current[2].value = "";
@@ -169,6 +169,7 @@ const ContactComponent = () => {
                             name="user_name"
                             type="text"
                             placeholder="Enter Your Name ..."
+                            required
                             className="h-10 w-full rounded-md border border-[#ddd] bg-transparent px-4 text-base focus:border-[#17B978] focus:outline-none"
                           />
                         </div>
@@ -184,6 +185,7 @@ const ContactComponent = () => {
                             name="user_email"
                             type="email"
                             placeholder="Enter Your Email ..."
+                            required
                             className="h-10 w-full rounded-md border border-[#ddd] bg-transparent px-4 text-base focus:border-[#17B978] focus:outline-none"
                           />
                         </div>
@@ -199,6 +201,7 @@ const ContactComponent = () => {
                             name="subject"
                             type="text"
                             placeholder="Enter Your Subject ..."
+                            required
                             className="h-10 w-full rounded-md border border-[#ddd] bg-transparent px-4 text-base focus:border-[#17B978] focus:outline-none"
                           />
                         </div>
@@ -215,6 +218,7 @@ const ContactComponent = () => {
                             cols="1"
                             rows="5"
                             placeholder="Enter Your Massage ..."
+                            required
                             className=" w-full rounded-md border border-[#ddd] bg-transparent py-2 px-4 text-base focus:border-[#17B978] focus:outline-none"
                           ></textarea>
                         </div>
