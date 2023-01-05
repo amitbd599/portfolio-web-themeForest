@@ -30,7 +30,7 @@ h6 {
 
 /* Button Design */
 .my__btn {
-  padding: 12px 35px;
+  padding: 10px 25px;
   border: 2px solid #17b978;
   position: relative;
   overflow: hidden;
@@ -279,6 +279,9 @@ h6 {
   margin: 0;
   padding: 0;
 }
+.portfolio__component .portfolio__tabs__body .react-tabs__tab-list li {
+  margin-bottom: 10px;
+}
 .portfolio__component .portfolio__tabs__body .img__file {
   overflow: hidden;
   position: relative;
@@ -392,5 +395,13 @@ h6 {
   }
   .react-tabs__tab {
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 379px) {
+  .sidebar__section .menu__section ul li a {
+    padding: 12px 12px;
+  }
+  .sidebar__section .menu__section ul li {
+    padding: 3px 3px;
   }
 }

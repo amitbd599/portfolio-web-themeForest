@@ -6,59 +6,59 @@ import Blog from "../Script/Blog";
 const BlogComponent = () => {
   return (
     <>
-      <section className='blog__component min-h-screen flex items-center justify-center'>
+      <section className="blog__component flex min-h-screen items-center justify-center">
         {/* ========= Blog Main Container ========= */}
         <div>
           {/* Heading Text */}
-          <div className='container mx-auto pt-[50px] md:pt-[80px]'>
+          <div className="container mx-auto pt-[50px] md:pt-[80px]">
             <Fade>
-              <div className='heading__text flex justify-center relative'>
-                <h2 className=' text-[46px] md:text-[60px] font-bold uppercase'>
-                  <span className='text-[#17B978]'>All</span> Blogs
+              <div className="heading__text relative flex justify-center">
+                <h2 className="text-[36px] font-bold uppercase sm:text-[46px] md:text-[60px]">
+                  <span className="text-[#17B978]">All</span> Blogs
                 </h2>
-                <h2 className='text-[65px] md:text-[120px] font-extrabold opacity-5 absolute top-[0px] md:top-[-20px]'>
+                <h2 className="absolute top-[0px] text-[50px] font-extrabold opacity-5 sm:text-[65px] md:top-[-20px] md:text-[100px] lg:text-[120px]">
                   News
                 </h2>
               </div>
             </Fade>
           </div>
           {/* Blog Info */}
-          <div className='blog__info container mx-auto px-5 md:px-14 mt-16 md:mt-24 mb-32 md:mb-20'>
+          <div className="blog__info container mx-auto mt-16 mb-32 px-5 md:mt-24 md:mb-20 md:px-14">
             <Fade>
-              <div className='grid grid-cols-12 gp-4 md:gap-10'>
+              <div className="gp-4 grid grid-cols-12 gap-5 lg:gap-10">
                 {Blog.map((item, index) => (
                   <div
-                    className='item col-span-12 md:col-span-6 mb-12 md:mb-8 '
+                    className="item col-span-12 mb-12 md:col-span-6 md:mb-8 "
                     key={index}
                   >
                     <div>
-                      <div className='img__file rounded-lg relative'>
+                      <div className="img__file relative rounded-lg">
                         <LazyLoad>
                           <img
                             src={item.img}
-                            alt='NetGrid - React Portfolio Template'
+                            alt="NetGrid - React Portfolio Template"
                           />
                         </LazyLoad>
-                        <div className='date absolute bottom-[22px] right-[10px]'>
-                          <span className='bg-[#17b878] py-4 px-4 rounded-lg'>
+                        <div className="date absolute bottom-[22px] right-[10px]">
+                          <span className="rounded-lg bg-[#17b878] py-4 px-4">
                             {item.date}
                           </span>
                         </div>
                       </div>
-                      <div className='text__file'>
-                        <h2 className='text-[22px] font-semibold mt-5'>
+                      <div className="text__file">
+                        <h2 className="mt-5 text-[22px] font-semibold">
                           {item.title}
                         </h2>
-                        <p className='mt-3'>{item.des}</p>
+                        <p className="mt-3">{item.des}</p>
                       </div>
 
                       <div>
-                        <Link to='/single-blog'>
-                          <button className='my__btn__two'>
-                            <span className='circle' aria-hidden='true'>
-                              <span className='icon arrow'></span>
+                        <Link to="/single-blog">
+                          <button className="my__btn__two">
+                            <span className="circle" aria-hidden="true">
+                              <span className="icon arrow"></span>
                             </span>
-                            <span className='button-text'>Read More</span>
+                            <span className="button-text">Read More</span>
                           </button>
                         </Link>
                       </div>
@@ -68,42 +68,42 @@ const BlogComponent = () => {
               </div>
             </Fade>
             {/* Pagination */}
-            <div className='pagination flex justify-center mt-6 md:mt-16'>
-              <nav aria-label='Page navigation'>
-                <ul className='inline-flex space-x-2'>
+            <div className="pagination mt-6 flex justify-center md:mt-16">
+              <nav aria-label="Page navigation">
+                <ul className="inline-flex space-x-2">
                   <li>
-                    <button className='flex items-center justify-center w-10 h-10 text-[#fff] transition-colors duration-150 rounded-full focus:shadow-outline hover:bg-[#373D4D]'>
-                      <svg className='w-4 h-4 fill-current' viewBox='0 0 20 20'>
+                    <button className="focus:shadow-outline flex h-10 w-10 items-center justify-center rounded-full text-[#fff] transition-colors duration-150 hover:bg-[#373D4D]">
+                      <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
                         <path
-                          d='M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z'
-                          clipRule='evenodd'
-                          fillRule='evenodd'
+                          d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                          fillRule="evenodd"
                         ></path>
                       </svg>
                     </button>
                   </li>
                   <li>
-                    <button className='w-10 h-10 text-white transition-colors duration-150 bg-[#17b978] border border-r-0 border-[#17b978] rounded-full focus:shadow-outline'>
+                    <button className="focus:shadow-outline h-10 w-10 rounded-full border border-r-0 border-[#17b978] bg-[#17b978] text-white transition-colors duration-150">
                       1
                     </button>
                   </li>
                   <li>
-                    <button className='w-10 h-10 text-[#fff] transition-colors duration-150 rounded-full focus:shadow-outline hover:bg-[#373D4D]'>
+                    <button className="focus:shadow-outline h-10 w-10 rounded-full text-[#fff] transition-colors duration-150 hover:bg-[#373D4D]">
                       2
                     </button>
                   </li>
                   <li>
-                    <button className='w-10 h-10 text-[#fff] transition-colors duration-150 rounded-full focus:shadow-outline hover:bg-[#373D4D]'>
+                    <button className="focus:shadow-outline h-10 w-10 rounded-full text-[#fff] transition-colors duration-150 hover:bg-[#373D4D]">
                       3
                     </button>
                   </li>
                   <li>
-                    <button className='flex items-center justify-center w-10 h-10 text-[#fff] transition-colors duration-150 rounded-full focus:shadow-outline hover:bg-[#373D4D]'>
-                      <svg className='w-4 h-4 fill-current' viewBox='0 0 20 20'>
+                    <button className="focus:shadow-outline flex h-10 w-10 items-center justify-center rounded-full text-[#fff] transition-colors duration-150 hover:bg-[#373D4D]">
+                      <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
                         <path
-                          d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
-                          clipRule='evenodd'
-                          fillRule='evenodd'
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clipRule="evenodd"
+                          fillRule="evenodd"
                         ></path>
                       </svg>
                     </button>

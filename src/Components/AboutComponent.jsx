@@ -9,103 +9,103 @@ import Skill from "../Script/Skill";
 const AboutComponent = () => {
   return (
     <>
-      <section className='about__component min-h-screen flex items-center justify-center'>
+      <section className="about__component flex min-h-screen items-center justify-center">
         <div>
           {/* ========= About Info Main Container ========= */}
           <div>
             {/* Heading Text */}
-            <div className='container mx-auto pt-[50px] md:pt-[80px]'>
+            <div className="container mx-auto pt-[50px] md:pt-[80px]">
               <Fade>
-                <div className='heading__text flex justify-center relative'>
-                  <h2 className=' text-[46px] md:text-[60px] font-bold uppercase'>
-                    About <span className='text-[#17B978]'>Me</span>
+                <div className="heading__text relative flex justify-center">
+                  <h2 className="text-[36px] font-bold uppercase sm:text-[46px] md:text-[60px]">
+                    About <span className="text-[#17B978]">Me</span>
                   </h2>
-                  <h2 className='text-[65px] md:text-[120px] font-extrabold opacity-5 absolute top-[0px] md:top-[-20px]'>
+                  <h2 className="absolute top-[0px] text-[50px] font-extrabold opacity-5 sm:text-[65px] md:top-[-20px] md:text-[100px] lg:text-[120px]">
                     Resume
                   </h2>
                 </div>
               </Fade>
             </div>
             {/* Personal Info */}
-            <div className='container mx-auto px-5 md:px-14 mt-10 md:mt-24'>
-              <div className='grid md:grid-cols-12 gap-10'>
+            <div className="container mx-auto mt-10 px-5 md:mt-24 md:px-14">
+              <div className="grid grid-cols-12 gap-2 md:gap-10">
                 {/* Left Side */}
-                <div className='col-span-6'>
-                  <div className=' block md:flex gap-8'>
+                <div className="col-span-12 xl:col-span-6">
+                  <div className=" block gap-8 md:flex">
                     <Fade>
-                      <div className='hidden md:block img__file relative z-20 before:absolute before:content-[""] before:left-[16px] before:top-[-16px] before:w-full before:h-full before:border-[5px] before:border-[#17B978] before:z-[-9]'>
+                      <div className='img__file relative z-20 hidden before:absolute before:left-[16px] before:top-[-16px] before:z-[-9] before:h-full before:w-full before:border-[5px] before:border-[#17B978] before:content-[""] md:block'>
                         <img
-                          className='h-48 w-full object-cover md:h-full md:w-[250px] rounded-md'
-                          src='/Assets/Images/profile.png'
-                          alt='NetGrid - React Portfolio Template'
+                          className="h-48 w-full rounded-md object-cover md:h-full md:w-[250px]"
+                          src="/Assets/Images/profile.png"
+                          alt="NetGrid - React Portfolio Template"
                         />
                       </div>
 
-                      <div className='flex md:hidden justify-center mb-6'>
-                        <div className='flex justify-center items-center w-[150px] h-[150px] rounded-full overflow-hidden ring-offset-0 ring-4 ring-[#373D4D]'>
+                      <div className="mb-6 flex justify-center md:hidden">
+                        <div className="flex h-[150px] w-[150px] items-center justify-center overflow-hidden rounded-full ring-4 ring-[#373D4D] ring-offset-0">
                           <img
-                            className='object-cover '
-                            src='/Assets/Images/profile.png'
-                            alt='NetGrid - React Portfolio Template'
+                            className="object-cover "
+                            src="/Assets/Images/profile.png"
+                            alt="NetGrid - React Portfolio Template"
                           />
                         </div>
                       </div>
                     </Fade>
-                    <div className='text__file pl-4 pt-5 md:pt-0'>
+                    <div className="text__file pt-5 md:pl-4 md:pt-0">
                       <Fade>
-                        <h3 className='text-2xl font-bold border-b-2 pb-1'>
+                        <h3 className="border-b-2 pb-1 text-2xl font-bold">
                           PERSONAL INFOS
                         </h3>
                       </Fade>
 
                       <div>
                         <Fade>
-                          <ul className='mt-2'>
-                            <li className='text-sm text-slate-400 mb-2'>
+                          <ul className="mt-2">
+                            <li className="mb-2 text-sm text-slate-400">
                               Name:
-                              <span className='text-base font-medium text-slate-200 pl-2'>
+                              <span className="pl-2 text-base font-medium text-slate-200">
                                 Francis M. Briscoe
                               </span>
                             </li>
-                            <li className='text-sm text-slate-400 mb-2'>
+                            <li className="mb-2 text-sm text-slate-400">
                               Age:
-                              <span className='text-base font-medium text-slate-200 pl-2'>
+                              <span className="pl-2 text-base font-medium text-slate-200">
                                 32
                               </span>
                             </li>
-                            <li className='text-sm text-slate-400 mb-2'>
+                            <li className="mb-2 text-sm text-slate-400">
                               Phone:
-                              <span className='text-base font-medium text-slate-200 pl-2'>
+                              <span className="pl-2 text-base font-medium text-slate-200">
                                 865-564-9052
                               </span>
                             </li>
-                            <li className='text-sm text-slate-400 mb-2'>
+                            <li className="mb-2 text-sm text-slate-400">
                               Skype:
-                              <span className='text-base font-medium text-slate-200 pl-2'>
+                              <span className="pl-2 text-base font-medium text-slate-200">
                                 Briscoe_fc
                               </span>
                             </li>
-                            <li className='text-sm text-slate-400 mb-2'>
+                            <li className="mb-2 text-sm text-slate-400">
                               Email:
-                              <span className='text-base font-medium text-slate-200 pl-2'>
+                              <span className="pl-2 text-base font-medium text-slate-200">
                                 FrancisMBriscoe@jourrapide.com
                               </span>
                             </li>
-                            <li className='text-sm text-slate-400 mb-2'>
+                            <li className="mb-2 text-sm text-slate-400">
                               Address:
-                              <span className='text-base font-medium text-slate-200 pl-2'>
+                              <span className="pl-2 text-base font-medium text-slate-200">
                                 4080 Berkshire Circle
                               </span>
                             </li>
-                            <li className='text-sm text-slate-400 mb-2'>
+                            <li className="mb-2 text-sm text-slate-400">
                               Languages:
-                              <span className='text-base font-medium text-slate-200 pl-2'>
+                              <span className="pl-2 text-base font-medium text-slate-200">
                                 French, English
                               </span>
                             </li>
-                            <li className='text-sm text-slate-400 mb-2'>
+                            <li className="mb-2 text-sm text-slate-400">
                               Nationality:
-                              <span className='text-base font-medium text-slate-200 pl-2'>
+                              <span className="pl-2 text-base font-medium text-slate-200">
                                 USA
                               </span>
                             </li>
@@ -116,26 +116,26 @@ const AboutComponent = () => {
                   </div>
                 </div>
                 {/* Right Side */}
-                <div className='col-span-6'>
-                  <div className='skill__file relative ml-5'>
+                <div className="col-span-12 mt-3 md:mt-0 xl:col-span-6">
+                  <div className="skill__file relative xl:ml-5">
                     <Fade>
-                      <div className='grid grid-cols-12 gap-6'>
+                      <div className="grid grid-cols-12 gap-6">
                         {Experience.map((item, index) => (
                           <div
                             key={index}
-                            className='col-span-6 md:col-span-4 border border-[#ddd] px-2 py-2 rounded-lg'
+                            className="col-span-6 rounded-lg border border-[#ddd] px-2 py-2 md:col-span-4"
                           >
                             <div>
-                              <div className='flex justify-center'>
-                                <h2 className='text-[40px] font-bold'>
+                              <div className="flex justify-center">
+                                <h2 className="text-[40px] font-bold">
                                   {item.number}
-                                  <span className=' text-[#17B978] font-medium'>
+                                  <span className=" font-medium text-[#17B978]">
                                     +
                                   </span>
                                 </h2>
                               </div>
-                              <div className='flex justify-center mt-1'>
-                                <p className='text-[16px] font-semibold uppercase text-center'>
+                              <div className="mt-1 flex justify-center">
+                                <p className="text-center text-[12px] font-semibold uppercase sm:text-[16px]">
                                   {item.title}
                                 </p>
                               </div>
@@ -153,13 +153,13 @@ const AboutComponent = () => {
           {/* ========= Skill Info Main Container ========= */}
           <div>
             {/* Heading Text */}
-            <div className='container mx-auto pt-[60px] md:pt-[80px]'>
+            <div className="container mx-auto pt-[60px] md:pt-[80px]">
               <Fade>
-                <div className='heading__text flex justify-center relative'>
-                  <h2 className=' text-[46px] md:text-[60px] font-bold uppercase'>
-                    <span className='text-[#17B978]'>My</span> Skill
+                <div className="heading__text relative flex justify-center">
+                  <h2 className="text-[36px] font-bold uppercase sm:text-[46px] md:text-[60px]">
+                    <span className="text-[#17B978]">My</span> Skill
                   </h2>
-                  <h2 className='text-[65px] md:text-[120px] font-extrabold opacity-5 absolute top-[0px] md:top-[-20px]'>
+                  <h2 className="absolute top-[0px] text-[50px] font-extrabold opacity-5 sm:text-[65px] md:top-[-20px] md:text-[100px] lg:text-[120px]">
                     Experience
                   </h2>
                 </div>
@@ -167,25 +167,25 @@ const AboutComponent = () => {
             </div>
 
             {/* Skill Info */}
-            <div className='container mx-auto px-5 md:px-14 mt-18 md:mt-24 '>
-              <div className='skill__items mt-16'>
-                <div className='grid grid-cols-12 gap-2 md:gap-10'>
+            <div className="mt-18 container mx-auto px-5 md:mt-24 md:px-14 ">
+              <div className="skill__items mt-16">
+                <div className="grid grid-cols-12 gap-5 md:gap-10">
                   {Skill.map((item, index) => (
                     <Fade key={index}>
-                      <div className='col-span-6 md:col-span-2 mb-10 flex justify-center'>
+                      <div className="col-span-4 mb-6 flex justify-center sm:mb-10 md:col-span-3 lg:col-span-2">
                         <div style={{ width: 120, height: 120 }}>
                           <CircularProgressbar
                             value={item.number}
                             text={item.number + "%"}
-                            strokeWidth='10'
+                            strokeWidth="10"
                             styles={buildStyles({
                               pathColor: "#17B978",
                               textColor: "#fff",
                               textSize: "22px",
                             })}
                           />
-                          <div className='text__heading flex justify-center mt-3'>
-                            <h2 className='text-base font-medium'>
+                          <div className="text__heading mt-3 flex justify-center">
+                            <h2 className="text-[14px] font-medium sm:text-base">
                               {item.title}
                             </h2>
                           </div>
@@ -201,97 +201,101 @@ const AboutComponent = () => {
           {/* ========= Resume Info Main Container ========= */}
           <div>
             {/* Heading Text */}
-            <div className='container mx-auto pt-[60px] md:pt-[80px] '>
+            <div className="container mx-auto pt-[60px] md:pt-[80px] ">
               <Fade>
-                <div className='heading__text flex justify-center relative'>
-                  <h2 className=' text-[46px] md:text-[60px] font-bold uppercase'>
-                    Cover <span className='text-[#17B978]'>Letter</span>
+                <div className="heading__text relative flex justify-center">
+                  <h2 className="text-[36px] font-bold uppercase sm:text-[46px] md:text-[60px]">
+                    Cover <span className="text-[#17B978]">Letter</span>
                   </h2>
-                  <h2 className='text-[65px] md:text-[120px] font-extrabold opacity-5 absolute top-[0px] md:top-[-20px]'>
+                  <h2 className="absolute top-[0px] text-[55px] font-extrabold opacity-5 sm:text-[65px] md:top-[-20px] md:text-[120px]">
                     Resume
                   </h2>
                 </div>
               </Fade>
             </div>
             {/* Resume Info */}
-            <div className='container mx-auto px-5 md:px-14 mt-24 mb-28 md:mb-20'>
-              <div className='resume__file mt-16'>
-                <div className='grid md:grid-cols-12 md:gap-10'>
+            <div className="container mx-auto mb-28 mt-8 px-5 sm:mt-16 md:mt-24 md:mb-20 md:px-14">
+              <div className="resume__file mt-16">
+                <div className="grid md:grid-cols-12 md:gap-10">
                   {/* Left Side Working Experience*/}
-                  <div className='col-span-6'>
+                  <div className="col-span-12 lg:col-span-6">
                     <Fade>
-                      <div className='heading__text flex items-end'>
+                      <div className="heading__text flex items-end">
                         <div>
                           <img
-                            className='w-[50px]'
-                            src='/Assets/Images/working.png'
-                            alt='NetGrid - React Portfolio Template'
+                            className="w-[50px]"
+                            src="/Assets/Images/working.png"
+                            alt="NetGrid - React Portfolio Template"
                           />
                         </div>
-                        <h2 className='text-[20px] md:text-[26px] ml-3 font-semibold relative'>
+                        <h2 className="relative ml-3 text-[20px] font-semibold md:text-[26px]">
                           Working Experience
                         </h2>
                       </div>
                     </Fade>
 
-                    <div className='intro__file mt-8 '>
+                    <div className="intro__file mt-8 ">
                       {workingExperience.map((item, index) => (
                         <Fade key={index}>
-                          <div className='items mb-8 relative'>
-                            <div className='md:flex items-center'>
-                              <h3 className='text-[20px] md:text-[25px]  font-semibold text-[#17B978]'>
+                          <div className="items relative mb-8">
+                            <div className="items-center md:flex lg:block xl:flex">
+                              <h3 className="text-[16px] font-semibold text-[#17B978]  sm:text-[20px] md:text-[25px]">
                                 {item.title}
                               </h3>
-                              <div className='mt-[-4px] md:mt-0'>
-                                <span className='inline-block md:inline text-xs text-[#fff] bg-[#373D4D] rounded-full py-0.5 px-4 md:ml-2'>
+                              <div className="mt-[-4px] md:mt-0 lg:mt-[-4px] xl:mt-0">
+                                <span className="inline-block rounded-full bg-[#373D4D] py-0.5 px-4 text-xs text-[#fff] md:ml-2 md:inline lg:ml-0 xl:ml-2">
                                   {item.time}
                                 </span>
                               </div>
                             </div>
-                            <h3 className='text-[18px] font-semibold mt-2 md:mt-0'>
+                            <h3 className="mt-2 text-[14px] font-semibold sm:text-[18px] md:mt-0 lg:mt-[12px] xl:mt-0">
                               {item.company}
                             </h3>
-                            <p className='text-base mt-3'>{item.text}</p>
+                            <p className="mt-3 text-sm sm:text-base lg:mt-2 xl:mt-3">
+                              {item.text}
+                            </p>
                           </div>
                         </Fade>
                       ))}
                     </div>
                   </div>
                   {/* Right Side Educational Qualifications*/}
-                  <div className='col-span-6'>
+                  <div className="col-span-12 mt-3 md:mt-0 lg:col-span-6">
                     <Fade>
-                      <div className='heading__text flex items-end'>
+                      <div className="heading__text flex items-end">
                         <div>
                           <img
-                            className='w-[50px]'
-                            src='/Assets/Images/college-graduation.png'
-                            alt='NetGrid - React Portfolio Template'
+                            className="w-[50px]"
+                            src="/Assets/Images/college-graduation.png"
+                            alt="NetGrid - React Portfolio Template"
                           />
                         </div>
-                        <h2 className='text-[20px] md:text-[26px] ml-3 font-semibold relative'>
+                        <h2 className="relative ml-3 text-[20px] font-semibold md:text-[26px]">
                           Educational Qualifications
                         </h2>
                       </div>
                     </Fade>
 
-                    <div className='intro__file mt-8 '>
+                    <div className="intro__file mt-8 ">
                       {Education.map((item, index) => (
                         <Fade key={index}>
-                          <div className='items mb-8 relative'>
-                            <div className='md:flex items-center'>
-                              <h3 className='text-[20px] md:text-[25px]  font-semibold text-[#17B978]'>
+                          <div className="items relative mb-8">
+                            <div className="items-center md:flex lg:block xl:flex">
+                              <h3 className="text-[16px] font-semibold text-[#17B978]  sm:text-[20px] md:text-[25px]">
                                 {item.title}
                               </h3>
-                              <div className='mt-[-4px] md:mt-0'>
-                                <span className='inline-block md:inline text-xs text-[#fff] bg-[#373D4D] rounded-full py-0.5 px-4 md:ml-2'>
+                              <div className="mt-[-4px] md:mt-0 lg:mt-[-4px] xl:mt-0">
+                                <span className="inline-block rounded-full bg-[#373D4D] py-0.5 px-4 text-xs text-[#fff] md:ml-2 md:inline lg:ml-0 xl:ml-2">
                                   {item.time}
                                 </span>
                               </div>
                             </div>
-                            <h3 className='text-[18px] font-semibold mt-2 md:mt-0'>
+                            <h3 className="mt-2 text-[14px] font-semibold sm:text-[18px] md:mt-0 lg:mt-[12px] xl:mt-0">
                               {item.institute}
                             </h3>
-                            <p className='text-base mt-3'>{item.text}</p>
+                            <p className="mt-3 text-sm sm:text-base lg:mt-2 xl:mt-3">
+                              {item.text}
+                            </p>
                           </div>
                         </Fade>
                       ))}

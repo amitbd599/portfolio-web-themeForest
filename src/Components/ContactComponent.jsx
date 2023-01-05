@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -6,183 +6,227 @@ import {
   FaPhoneAlt,
   FaSlack,
 } from "react-icons/fa";
-
+import emailjs from "@emailjs/browser";
 import { MdEmail } from "react-icons/md";
 import { BsGithub, BsTwitter } from "react-icons/bs";
 import Fade from "react-reveal/Fade";
+import { toast, Toaster } from "react-hot-toast";
 const ContactComponent = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    // Please See Documentation for more information
+    emailjs
+      .sendForm(
+        "service_yipk4xg", //YOUR_SERVICE_ID
+        "template_71bgc2q", //YOUR_TEMPLATE_ID
+        form.current,
+        "cwf8kROl5o3__96Ti" //YOUR_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          if (result.text === "OK") {
+            toast.success("Massage Sent Successfully");
+            form.current[0].value = "";
+            form.current[1].value = "";
+            form.current[2].value = "";
+            form.current[3].value = "";
+          }
+        },
+        (error) => {
+          if (error.text !== "OK") {
+            toast.success("Massage Not Sent!");
+          }
+        }
+      );
+  };
   return (
     <>
-      <section className='contact__component min-h-screen flex items-center justify-center'>
+      <Toaster position="bottom-center" reverseOrder={false} />
+      <section className="contact__component flex min-h-screen items-center justify-center">
         <div>
           {/* Heading Text */}
-          <div className='container mx-auto pt-[50px] md:pt-[80px]'>
+          <div className="container mx-auto pt-[50px] md:pt-[80px]">
             <Fade>
-              <div className='heading__text flex justify-center relative'>
-                <h2 className=' text-[46px] md:text-[60px] font-bold uppercase'>
-                  Contact <span className='text-[#17B978]'>Us</span>
+              <div className="heading__text relative flex justify-center">
+                <h2 className="text-[36px] font-bold uppercase sm:text-[46px] md:text-[60px]">
+                  Contact <span className="text-[#17B978]">Us</span>
                 </h2>
-                <h2 className='text-[65px] md:text-[120px] font-extrabold opacity-5 absolute top-[0px] md:top-[-20px]'>
+                <h2 className="absolute top-[0px] text-[50px] font-extrabold opacity-5 sm:text-[60px] md:top-[-20px] md:text-[100px] lg:text-[120px]">
                   Connection
                 </h2>
               </div>
             </Fade>
           </div>
           {/* ========= Contact Info Main Container ========= */}
-          <div className='contact__info container mx-auto px-5 md:px-14 mt-16 md:mt-24 mb-32 md:mb-20'>
-            <div className='grid grid-cols-12 gap-5 md:gap-10'>
-              <div className='col-span-12 md:col-span-5'>
+          <div className="contact__info container mx-auto mt-16 mb-32 px-5 md:mt-24 md:mb-20 md:px-14">
+            <div className="grid grid-cols-12 gap-5 md:gap-10">
+              <div className="col-span-12 lg:col-span-5">
                 {/* Location Section */}
                 <Fade>
                   <div>
-                    <div className='mb-10'>
-                      <h2 className='text-2xl inline font-semibold mb-5 mt-2 relative after:content-[""] after:absolute after:w-full after:h-[3px] after:bg-[#17B878] after:left-0 after:bottom-[-6px] '>
+                    <div className="mb-10">
+                      <h2 className='relative mb-5 mt-2 inline text-2xl font-semibold after:absolute after:left-0 after:bottom-[-6px] after:h-[3px] after:w-full after:bg-[#17B878] after:content-[""] '>
                         Get in touch
                       </h2>
-                      <p className='mt-8 text-base'>
+                      <p className="mt-8 text-base">
                         Curabitur vitae nunc sed velit dignissim sodales. Urna
                         neque viverra justo nec. In cursus massa tincidunt ut
                         ornare the butter leo integer.
                       </p>
                     </div>
                     <div>
-                      <div className='flex  items-center gap-4'>
-                        <div className='icon bg-[#373D4D] p-4 rounded-full'>
-                          <FaMapMarkedAlt className='text-[30px] text-[#17B878]' />
+                      <div className="flex  items-center gap-4">
+                        <div className="icon rounded-full bg-[#373D4D] p-3 sm:p-4">
+                          <FaMapMarkedAlt className="text-[30px] text-[#17B878]" />
                         </div>
-                        <div className='text'>
-                          <p className='text-base'>
+                        <div className="text">
+                          <p className="text-sm sm:text-base">
                             4080 Berkshire Circle Knoxville, <br /> TN 37917,
                             New York
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div className='mt-4'>
-                      <div className='flex  items-center gap-4'>
-                        <div className='icon bg-[#373D4D] p-4 rounded-full'>
-                          <MdEmail className='text-[30px] text-[#17B878]' />
+                    <div className="mt-4">
+                      <div className="flex  items-center gap-4">
+                        <div className="icon rounded-full bg-[#373D4D] p-3 sm:p-4">
+                          <MdEmail className="text-[30px] text-[#17B878]" />
                         </div>
-                        <div className='text'>
-                          <p className='text-base'>
+                        <div className="text">
+                          <p className="text-sm sm:text-base">
                             FrancisMBriscoe@jourrapide.com
                           </p>
-                          <p className='text-base'>info@jourrapide.com</p>
+                          <p className="text-sm sm:text-base">
+                            info@jourrapide.com
+                          </p>
                         </div>
                       </div>
                     </div>
-                    <div className='mt-4'>
-                      <div className='flex  items-center gap-4'>
-                        <div className='icon bg-[#373D4D] p-4 rounded-full'>
-                          <FaPhoneAlt className='text-[30px] text-[#17B878]' />
+                    <div className="mt-4">
+                      <div className="flex  items-center gap-4">
+                        <div className="icon rounded-full bg-[#373D4D] p-3 sm:p-4">
+                          <FaPhoneAlt className="text-[30px] text-[#17B878]" />
                         </div>
-                        <div className='text'>
-                          <p className='text-base'>865-564-9052</p>
-                          <p className='text-base'>865-884-9658</p>
+                        <div className="text">
+                          <p className="text-sm sm:text-base">865-564-9052</p>
+                          <p className="text-sm sm:text-base">865-884-9658</p>
                         </div>
                       </div>
                     </div>
-                    <div className='mt-10'>
-                      <div className='flex  items-center gap-2'>
+                    <div className="mt-10">
+                      <div className="flex  items-center gap-2">
                         <a
-                          href='#'
-                          className='bg-[#373D4D] p-3 rounded-full hover:bg-[#1877f2] ease-linear duration-200 transition-all'
+                          href="#"
+                          className="rounded-full bg-[#373D4D] p-3 transition-all duration-200 ease-linear hover:bg-[#1877f2]"
                         >
-                          <FaFacebookF className='text-[20px]' />
+                          <FaFacebookF className="text-[20px]" />
                         </a>
                         <a
-                          href='#'
-                          className='bg-[#373D4D] p-3 rounded-full hover:bg-[#1da1f2] ease-linear duration-200 transition-all'
+                          href="#"
+                          className="rounded-full bg-[#373D4D] p-3 transition-all duration-200 ease-linear hover:bg-[#1da1f2]"
                         >
-                          <BsTwitter className='text-[20px]' />
+                          <BsTwitter className="text-[20px]" />
                         </a>
                         <a
-                          href='#'
-                          className='bg-[#373D4D] p-3 rounded-full hover:bg-[#0077b5] ease-linear duration-200 transition-all'
+                          href="#"
+                          className="rounded-full bg-[#373D4D] p-3 transition-all duration-200 ease-linear hover:bg-[#0077b5]"
                         >
-                          <FaLinkedinIn className='text-[20px]' />
+                          <FaLinkedinIn className="text-[20px]" />
                         </a>
                         <a
-                          href='#'
-                          className='bg-[#373D4D] p-3 rounded-full hover:bg-[#333] ease-linear duration-200 transition-all'
+                          href="#"
+                          className="rounded-full bg-[#373D4D] p-3 transition-all duration-200 ease-linear hover:bg-[#333]"
                         >
-                          <BsGithub className='text-[20px]' />
+                          <BsGithub className="text-[20px]" />
                         </a>
                         <a
-                          href='#'
-                          className='bg-[#373D4D] p-3 rounded-full hover:bg-[#541554] ease-linear duration-200 transition-all'
+                          href="#"
+                          className="rounded-full bg-[#373D4D] p-3 transition-all duration-200 ease-linear hover:bg-[#541554]"
                         >
-                          <FaSlack className='text-[20px]' />
+                          <FaSlack className="text-[20px]" />
                         </a>
                       </div>
                     </div>
                   </div>
                 </Fade>
               </div>
-              <div className='col-span-12 md:col-span-7 mt-10 md:mt-0'>
+              <div className="lg-10 col-span-12 mt-5 lg:col-span-7 lg:mt-0">
                 <Fade>
-                  <div className='md:flex justify-center'>
-                    <div className='bg-[#373D4D] px-10 py-6 w-full md:mx-5 rounded-lg'>
-                      <div className='mb-2'>
-                        <label htmlFor='name' className='text-base mb-2 block'>
-                          Name :
-                        </label>
-                        <input
-                          id='name'
-                          name='name'
-                          type='text'
-                          placeholder='Enter Your Name ...'
-                          className='h-10 w-full rounded-md bg-transparent border border-[#ddd] px-4 text-base focus:outline-none focus:border-[#17B978]'
-                        />
-                      </div>
-                      <div className='mb-2'>
-                        <label htmlFor='email' className='text-base mb-2 block'>
-                          Email :
-                        </label>
-                        <input
-                          id='email'
-                          name='email'
-                          type='email'
-                          placeholder='Enter Your Email ...'
-                          className='h-10 w-full rounded-md bg-transparent border border-[#ddd] px-4 text-base focus:outline-none focus:border-[#17B978]'
-                        />
-                      </div>
-                      <div className='mb-2'>
-                        <label
-                          htmlFor='subject'
-                          className='text-base mb-2 block'
-                        >
-                          Subject :
-                        </label>
-                        <input
-                          id='subject'
-                          name='subject'
-                          type='text'
-                          placeholder='Enter Your Subject ...'
-                          className='h-10 w-full rounded-md bg-transparent border border-[#ddd] px-4 text-base focus:outline-none focus:border-[#17B978]'
-                        />
-                      </div>
-                      <div className='mb-2'>
-                        <label
-                          htmlFor='massage'
-                          className='text-base mb-2 block'
-                        >
-                          Massage :
-                        </label>
-                        <textarea
-                          name='massage'
-                          id='massage'
-                          cols='1'
-                          rows='5'
-                          placeholder='Enter Your Massage ...'
-                          className=' w-full rounded-md bg-transparent py-2 border border-[#ddd] px-4 text-base focus:outline-none focus:border-[#17B978]'
-                        ></textarea>
-                      </div>
-                      <div className=' pt-2'>
-                        <button className='my__btn font-bold text-sm uppercase'>
-                          Send Message
-                        </button>
-                      </div>
+                  <div className="justify-center md:flex">
+                    <div className="w-full rounded-lg bg-[#373D4D] px-6 py-6 sm:px-8 md:px-10 lg:mx-5">
+                      <form ref={form} onSubmit={sendEmail}>
+                        <div className="mb-2">
+                          <label
+                            htmlFor="name"
+                            className="mb-2 block text-base"
+                          >
+                            Name :
+                          </label>
+                          <input
+                            id="name"
+                            name="user_name"
+                            type="text"
+                            placeholder="Enter Your Name ..."
+                            className="h-10 w-full rounded-md border border-[#ddd] bg-transparent px-4 text-base focus:border-[#17B978] focus:outline-none"
+                          />
+                        </div>
+                        <div className="mb-2">
+                          <label
+                            htmlFor="email"
+                            className="mb-2 block text-base"
+                          >
+                            Email :
+                          </label>
+                          <input
+                            id="email"
+                            name="user_email"
+                            type="email"
+                            placeholder="Enter Your Email ..."
+                            className="h-10 w-full rounded-md border border-[#ddd] bg-transparent px-4 text-base focus:border-[#17B978] focus:outline-none"
+                          />
+                        </div>
+                        <div className="mb-2">
+                          <label
+                            htmlFor="subject"
+                            className="mb-2 block text-base"
+                          >
+                            Subject :
+                          </label>
+                          <input
+                            id="subject"
+                            name="subject"
+                            type="text"
+                            placeholder="Enter Your Subject ..."
+                            className="h-10 w-full rounded-md border border-[#ddd] bg-transparent px-4 text-base focus:border-[#17B978] focus:outline-none"
+                          />
+                        </div>
+                        <div className="mb-2">
+                          <label
+                            htmlFor="massage"
+                            className="mb-2 block text-base"
+                          >
+                            Massage :
+                          </label>
+                          <textarea
+                            name="message"
+                            id="massage"
+                            cols="1"
+                            rows="5"
+                            placeholder="Enter Your Massage ..."
+                            className=" w-full rounded-md border border-[#ddd] bg-transparent py-2 px-4 text-base focus:border-[#17B978] focus:outline-none"
+                          ></textarea>
+                        </div>
+                        <div className=" pt-2">
+                          <button
+                            className="my__btn text-sm font-bold uppercase"
+                            type="submit"
+                          >
+                            Send Message
+                          </button>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </Fade>

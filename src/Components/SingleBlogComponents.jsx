@@ -6,56 +6,56 @@ import { Link } from "react-router-dom";
 const SingleBlogComponents = () => {
   return (
     <>
-      <section className='single__blog__component min-h-screen flex items-center justify-center'>
+      <section className="single__blog__component flex min-h-screen items-center justify-center">
         {/* ========= Single Blog Main Container ========= */}
-        <div className='container mx-auto px-5 md:px-14 pt-16 md:pt-24 mb-32 md:mb-20'>
-          <div className='grid grid-cols-12 gap-5 md:gap-10'>
-            <div className='col-span-12 md:col-span-8'>
-              <div className=' bg-[#373D4D] rounded-lg pb-8'>
-                <div className='img__file flex justify-center relative'>
+        <div className="container mx-auto mb-32 px-5 pt-16 md:mb-20 md:px-14 md:pt-24">
+          <div className="grid grid-cols-12 gap-5 md:gap-10">
+            <div className="col-span-12 lg:col-span-8">
+              <div className=" rounded-lg bg-[#373D4D] pb-8">
+                <div className="img__file relative flex justify-center">
                   <LazyLoad>
                     <img
-                      className='object-cover w-full rounded-lg'
-                      src='/Assets/Images/blog/blog_7.png'
-                      alt='NetGrid - React Portfolio Template'
+                      className="w-full rounded-lg object-cover"
+                      src="/Assets/Images/blog/blog_7.png"
+                      alt="NetGrid - React Portfolio Template"
                     />
                   </LazyLoad>
 
-                  <div className='date absolute bottom-[20px] right-[10px]'>
-                    <span className='bg-[#17b878] px-3 py-3 rounded-lg'>
+                  <div className="date absolute bottom-[20px] right-[10px]">
+                    <span className="rounded-lg bg-[#17b878] px-3 py-3">
                       January 15, 2022
                     </span>
                   </div>
                 </div>
-                <div className='text__file mt-8 mb-6 mx-8'>
-                  <div className=''>
-                    <div className=' mb-3'>
-                      <span className='inline items-center'>
-                        <FaUserAlt className='text-[#17B878] inline' />
+                <div className="text__file mx-5 mt-8 mb-6 md:mx-8">
+                  <div className="">
+                    <div className=" mb-3">
+                      <span className="inline items-center">
+                        <FaUserAlt className="inline text-[#17B878]" />
 
-                        <span className='text-sm ml-1.5 '>Admin</span>
+                        <span className="ml-1.5 text-sm ">Admin</span>
                       </span>
 
-                      <span className='inline items-center ml-3'>
-                        <FaRegCalendarAlt className='text-[#17B878] inline' />
+                      <span className="ml-3 inline items-center">
+                        <FaRegCalendarAlt className="inline text-[#17B878]" />
 
-                        <span className='text-sm ml-1.5'>14 February 2022</span>
+                        <span className="ml-1.5 text-sm">14 February 2022</span>
                       </span>
 
-                      <span className='inline items-center ml-3'>
-                        <FaTags className='text-[#17B878] inline' />
+                      <span className="ml-3 inline items-center">
+                        <FaTags className="inline text-[#17B878]" />
 
-                        <span className='text-sm ml-1.5'>
+                        <span className="ml-1.5 text-sm">
                           NodeJS, NPM, React, Express
                         </span>
                       </span>
                     </div>
                   </div>
-                  <h2 className='text-2xl md:text-3xl font-semibold'>
+                  <h2 className="text-2xl font-semibold md:text-3xl">
                     12 Common JavaScript Functions You Need to Know.
                   </h2>
                 </div>
-                <div className='des mx-8'>
+                <div className="des mx-5 md:mx-8">
                   <p>
                     Fowler covers a range of topics including design,
                     refactoring, NoSQL, DSL, continuous delivery, microservices
@@ -99,7 +99,7 @@ const SingleBlogComponents = () => {
                     training content and user-friendly knowledge transfer.
                   </p>
                   <br />
-                  <h4 className='text-2xl font-semibold'>What You'll Get</h4>
+                  <h4 className="text-2xl font-semibold">What You'll Get</h4>
                   <br />
                   <p>
                     Georg Fischer is a global industrial engineering company
@@ -124,19 +124,19 @@ const SingleBlogComponents = () => {
                 </div>
               </div>
             </div>
-            <div className='col-span-12 md:col-span-4 md:pl-2 mt-8 md:mt-0'>
+            <div className="col-span-12 mt-8 lg:col-span-4 lg:mt-0 lg:pl-2">
               {/* Search Intro */}
-              <div className='search__box mb-8'>
-                <div className='relative text-gray-600 w-full'>
+              <div className="search__box mb-8">
+                <div className="relative w-full text-gray-600">
                   <input
-                    type='search'
-                    name='search'
-                    placeholder='Search'
-                    className='bg-white w-full h-12 px-5 pr-10 rounded-full text-sm focus:outline-none'
+                    type="search"
+                    name="search"
+                    placeholder="Search"
+                    className="h-12 w-full rounded-full bg-white px-5 pr-10 text-sm focus:outline-none"
                   />
                   <button
-                    type='submit'
-                    className='absolute right-0 top-0 p-[16px]'
+                    type="submit"
+                    className="absolute right-0 top-0 p-[16px]"
                   >
                     <FaSearch />
                   </button>
@@ -144,121 +144,121 @@ const SingleBlogComponents = () => {
               </div>
 
               {/* Recent Blog */}
-              <div className='recent__blog'>
+              <div className="recent__blog">
                 <div>
-                  <h2 className='text-[22px] inline font-medium mb-5 mt-2 relative after:content-[""] after:absolute after:w-full after:h-[3px] after:bg-[#17B878] after:left-0 after:bottom-[-6px] '>
+                  <h2 className='relative mb-5 mt-2 inline text-[22px] font-medium after:absolute after:left-0 after:bottom-[-6px] after:h-[3px] after:w-full after:bg-[#17B878] after:content-[""] '>
                     Recent Post
                   </h2>
                 </div>
-                <div className='mt-8'>
-                  <div className='items flex justify-between gap-4 mb-5'>
-                    <div className='img__file w-1/3 rounded-md'>
+                <div className="mt-8">
+                  <div className="items mb-5 flex justify-between gap-4">
+                    <div className="img__file w-1/3 rounded-md">
                       <LazyLoad>
                         <img
-                          className='rounded-md w-full h-full '
-                          src='/Assets/Images/blog/blog_1.png'
-                          alt='NetGrid - React Portfolio Template'
+                          className="h-full w-full rounded-md "
+                          src="/Assets/Images/blog/blog_1.png"
+                          alt="NetGrid - React Portfolio Template"
                         />
                       </LazyLoad>
                     </div>
-                    <div className='text__file w-2/3'>
+                    <div className="text__file w-2/3">
                       <Link
                         to={"/single-blog"}
-                        className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
+                        className="inline-block text-base font-medium transition-all duration-200 ease-linear hover:text-[#17B878]"
                       >
                         Before diving into how they operate with their powers.
                       </Link>
-                      <span className='text-[12px] inline-block mt-1 text-slate-300'>
+                      <span className="mt-1 inline-block text-[12px] text-slate-300">
                         January 15, 2022
                       </span>
                     </div>
                   </div>
-                  <div className='items flex justify-between gap-4 mb-5'>
-                    <div className='img__file w-1/3 rounded-md'>
+                  <div className="items mb-5 flex justify-between gap-4">
+                    <div className="img__file w-1/3 rounded-md">
                       <LazyLoad>
                         <img
-                          className='rounded-md w-full h-full '
-                          src='/Assets/Images/blog/blog_2.png'
-                          alt='NetGrid - React Portfolio Template'
+                          className="h-full w-full rounded-md "
+                          src="/Assets/Images/blog/blog_2.png"
+                          alt="NetGrid - React Portfolio Template"
                         />
                       </LazyLoad>
                     </div>
-                    <div className='text__file w-2/3'>
+                    <div className="text__file w-2/3">
                       <Link
                         to={"/single-blog"}
-                        className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
+                        className="inline-block text-base font-medium transition-all duration-200 ease-linear hover:text-[#17B878]"
                       >
                         Unlike other JS frameworks, React doesn’t to do you
                         want?
                       </Link>
-                      <span className='text-[12px] inline-block mt-1 text-slate-300'>
+                      <span className="mt-1 inline-block text-[12px] text-slate-300">
                         January 15, 2022
                       </span>
                     </div>
                   </div>
-                  <div className='items flex justify-between gap-4 mb-5'>
-                    <div className='img__file w-1/3 rounded-md'>
+                  <div className="items mb-5 flex justify-between gap-4">
+                    <div className="img__file w-1/3 rounded-md">
                       <LazyLoad>
                         <img
-                          className='rounded-md w-full h-full '
-                          src='/Assets/Images/blog/blog_3.png'
-                          alt='NetGrid - React Portfolio Template'
+                          className="h-full w-full rounded-md "
+                          src="/Assets/Images/blog/blog_3.png"
+                          alt="NetGrid - React Portfolio Template"
                         />
                       </LazyLoad>
                     </div>
-                    <div className='text__file w-2/3'>
+                    <div className="text__file w-2/3">
                       <Link
                         to={"/single-blog"}
-                        className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
+                        className="inline-block text-base font-medium transition-all duration-200 ease-linear hover:text-[#17B878]"
                       >
                         It is designed to be as beginner-friendly as possible
                         and uses.
                       </Link>
-                      <span className='text-[12px] inline-block mt-1 text-slate-300'>
+                      <span className="mt-1 inline-block text-[12px] text-slate-300">
                         January 15, 2022
                       </span>
                     </div>
                   </div>
-                  <div className='items flex justify-between gap-4 mb-5'>
-                    <div className='img__file w-1/3 rounded-md'>
+                  <div className="items mb-5 flex justify-between gap-4">
+                    <div className="img__file w-1/3 rounded-md">
                       <LazyLoad>
                         <img
-                          className='rounded-md w-full h-full '
-                          src='/Assets/Images/blog/blog_6.png'
-                          alt='NetGrid - React Portfolio Template'
+                          className="h-full w-full rounded-md "
+                          src="/Assets/Images/blog/blog_6.png"
+                          alt="NetGrid - React Portfolio Template"
                         />
                       </LazyLoad>
                     </div>
-                    <div className='text__file w-2/3'>
+                    <div className="text__file w-2/3">
                       <Link
                         to={"/single-blog"}
-                        className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
+                        className="inline-block text-base font-medium transition-all duration-200 ease-linear hover:text-[#17B878]"
                       >
                         JavaScript is a high-level programming language that.
                       </Link>
-                      <span className='text-[12px] inline-block mt-1 text-slate-300'>
+                      <span className="mt-1 inline-block text-[12px] text-slate-300">
                         January 15, 2022
                       </span>
                     </div>
                   </div>
-                  <div className='items flex justify-between gap-4 mb-5'>
-                    <div className='img__file w-1/3 rounded-md'>
+                  <div className="items mb-5 flex justify-between gap-4">
+                    <div className="img__file w-1/3 rounded-md">
                       <LazyLoad>
                         <img
-                          className='rounded-md w-full h-full '
-                          src='/Assets/Images/blog/blog_5.png'
-                          alt='NetGrid - React Portfolio Template'
+                          className="h-full w-full rounded-md "
+                          src="/Assets/Images/blog/blog_5.png"
+                          alt="NetGrid - React Portfolio Template"
                         />
                       </LazyLoad>
                     </div>
-                    <div className='text__file w-2/3'>
+                    <div className="text__file w-2/3">
                       <Link
                         to={"/single-blog"}
-                        className='text-base font-medium inline-block hover:text-[#17B878] transition-all duration-200 ease-linear'
+                        className="inline-block text-base font-medium transition-all duration-200 ease-linear hover:text-[#17B878]"
                       >
                         Python is one of the most chosen programming.
                       </Link>
-                      <span className='text-[12px] inline-block mt-1 text-slate-300'>
+                      <span className="mt-1 inline-block text-[12px] text-slate-300">
                         January 15, 2022
                       </span>
                     </div>
@@ -267,25 +267,25 @@ const SingleBlogComponents = () => {
               </div>
 
               {/* Tag Section */}
-              <div className='tag pt-5'>
-                <h2 className='text-[22px] inline font-medium mb-5 mt-2 relative after:content-[""] after:absolute after:w-full after:h-[3px] after:bg-[#17B878] after:left-0 after:bottom-[-6px] '>
+              <div className="tag pt-5">
+                <h2 className='relative mb-5 mt-2 inline text-[22px] font-medium after:absolute after:left-0 after:bottom-[-6px] after:h-[3px] after:w-full after:bg-[#17B878] after:content-[""] '>
                   Tags
                 </h2>
-                <div className='mt-8'>
-                  <button className='my__btn px-4 py-1.5 mb-3 ml-2'>
+                <div className="mt-8">
+                  <button className="my__btn mb-3 ml-2 px-4 py-1.5">
                     NodeJS
                   </button>
-                  <button className='my__btn px-4 py-1.5 mb-3 ml-2 '>
+                  <button className="my__btn mb-3 ml-2 px-4 py-1.5 ">
                     JavaScript
                   </button>
-                  <button className='my__btn px-4 py-1.5 mb-3 ml-2 '>
+                  <button className="my__btn mb-3 ml-2 px-4 py-1.5 ">
                     ReactJS
                   </button>
-                  <button className='my__btn px-4 py-1.5 mb-3 ml-2'>PHP</button>
-                  <button className='my__btn px-4 py-1.5 mb-3 ml-2 '>
+                  <button className="my__btn mb-3 ml-2 px-4 py-1.5">PHP</button>
+                  <button className="my__btn mb-3 ml-2 px-4 py-1.5 ">
                     Server
                   </button>
-                  <button className='my__btn px-4 py-1.5 mb-3 ml-2'>
+                  <button className="my__btn mb-3 ml-2 px-4 py-1.5">
                     Development
                   </button>
                 </div>
